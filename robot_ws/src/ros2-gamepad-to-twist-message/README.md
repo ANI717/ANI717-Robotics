@@ -5,9 +5,9 @@
 ROS 2 Package to Publish Gamepad Controller Inputs to Twist Message for Robot Movement.<br/>
 
 ## Install Dependency
-Install `inputs`.<br/>
+Install `Inputs`, `Torch`, `Torchvision`, `Opencv`, `traitlets`, `multiexit`, `Adafruit-SSD1306` and `Adafruit_MotorHat`.<br/>
 ```
-python3 -m pip install inputs
+python3 -m pip install inputs torch torchvision opencv-python Adafruit-SSD1306 Adafruit_MotorHat traitlets multiexit
 ```
 Install ROS2 dependency.<br/>
 ```
