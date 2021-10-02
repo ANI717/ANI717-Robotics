@@ -41,6 +41,10 @@ def generate_launch_description():
     save_image_cmd = Node(
         package = 'ros2_save_camera_image',
         node_executable = 'execute')
+    
+    cam_to_image_cmd = Node(
+        package = 'image_tools',
+        node_executable = 'cam2image')
 
         
     # Create the launch description and populate
@@ -50,6 +54,7 @@ def generate_launch_description():
     ld.add_action(twist_to_motion_cmd)
     ld.add_action(gamepad_to_twist_cmd)
     ld.add_action(save_image_cmd)
+    ld.add_action(cam_to_image_cmd)
         
     return ld
 
