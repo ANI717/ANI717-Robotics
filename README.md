@@ -8,7 +8,8 @@
 git clone https://github.com/ANI717/ANI717_Robotics
 ```
 
-## Add User to Inputs Group
+## Add User to Input Group
+Run following command and reboot.<br/>
 ```
 sudo gpasswd -a $USER input
 ```
