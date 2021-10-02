@@ -1,4 +1,0 @@
-- git: {local-name: src/deps/ros2-pytorch-model-to-twist-message, uri: 'https://github.com/ANI717/ros2-pytorch-model-to-twist-message.git', version: main}
-- git: {local-name: src/deps/ros2-gamepad-to-twist-message, uri: 'https://github.com/ANI717/ros2-gamepad-to-twist-message.git', version: main}
-- git: {local-name: src/deps/ros2-twist-message-to-robot-motion, uri: 'https://github.com/ANI717/ros2-twist-message-to-robot-motion.git', version: main}
-- git: {local-name: src/deps/ros2-save-camera-image, uri: 'https://github.com/ANI717/ros2-save-camera-image.git', version: main}
