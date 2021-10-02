@@ -39,7 +39,7 @@ def generate_launch_description():
         node_executable = 'execute')
     
     save_image_cmd = Node(
-        package = 'ros2_ros2_save_camera_image',
+        package = 'ros2_save_camera_image',
         node_executable = 'execute')
 
         
