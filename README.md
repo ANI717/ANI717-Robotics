@@ -19,5 +19,5 @@ sudo gpasswd -a $USER input
 cd ~/ANI717_Robotics/robot_ws/
 rosws update
 rosdep  install --from-paths src --ignore-src -r -y
-colcon build && . install/setup.bash && ros2 launch ani717_robot gamepad_launch.py
+colcon build && . install/setup.bash && ros2 launch robot_launch gamepad_launch.py
 ```
