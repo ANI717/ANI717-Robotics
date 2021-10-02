@@ -8,6 +8,11 @@
 git clone https://github.com/ANI717/ANI717_Robotics
 ```
 
+## Add User to Inputs Group
+```
+sudo gpasswd -a $USER input
+```
+
 ## Build Robot Workspace
 ```
 cd ~/ANI717_Robotics/robot_ws/
