@@ -37,6 +37,10 @@ def generate_launch_description():
     twist_to_motion_cmd = Node(
         package = 'ros2_twist_message_to_robot_motion',
         node_executable = 'execute')
+    
+    save_image_cmd = Node(
+        package = 'ros2_ros2_save_camera_image',
+        node_executable = 'execute')
 
         
     # Create the launch description and populate
@@ -45,6 +49,7 @@ def generate_launch_description():
     # Add all actions
     ld.add_action(twist_to_motion_cmd)
     ld.add_action(gamepad_to_twist_cmd)
+    ld.add_action(save_image_cmd)
         
     return ld
 
