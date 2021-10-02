@@ -19,16 +19,25 @@ Direction: `Backward` `Left`.<br/>
 git clone https://github.com/ANI717/ANI717_Robotics
 ```
 
+## Install Dependency
+Install `Inputs`, `Torch`, `Torchvision`, `Opencv`, `traitlets`, `multiexit`, `Adafruit-SSD1306` and `Adafruit_MotorHat`.<br/>
+```
+python3 -m pip install inputs torch torchvision opencv-python Adafruit-SSD1306 Adafruit_MotorHat traitlets multiexit
+```
+Install ROS2 dependency.<br/>
+```
+cd ~/ANI717_Robotics/robot_ws/
+rosdep update
+rosdep install --from-paths src --ignore-src -r -y
+```
+
 ## Add User to Input Group
 Run following command and reboot.<br/>
 ```
 sudo gpasswd -a $USER input
 ```
 
-## Build Robot Workspace
+## Build, Source & Launch Package
 ```
-cd ~/ANI717_Robotics/robot_ws/
-rosws update
-rosdep  install --from-paths src --ignore-src -r -y
 colcon build && . install/setup.bash && ros2 launch robot_launch gamepad_launch.py
 ```
