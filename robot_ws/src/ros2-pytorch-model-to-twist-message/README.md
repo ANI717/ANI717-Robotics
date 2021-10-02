@@ -7,16 +7,6 @@ ROS 2 Package to Publish Twist Message from Subscribed Sensor Image Message usin
 ## Colaborators
 [Animesh Bala Ani](https://www.linkedin.com/in/ani717/)
 
-## Download Package
-Download package in a ROS workspace.
-```
-git clone https://github.com/ANI717/ros2-pytorch-model-to-twist-message
-```
-Or update `.rosinstall` file with following command and run `rosws update` to clone this repository
-```
-- git: {local-name: src/deps/ros2-pytorch-model-to-twist-message, uri: 'https://github.com/ANI717/ros2-pytorch-model-to-twist-message.git', version: main}
-```
-
 ## Install Dependency
 Install Torch, Torchvision and Opencv.
 ```
