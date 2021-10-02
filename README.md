@@ -3,8 +3,7 @@
   <h1 align="center">ANI717 Robotics Workspace</h1>
 </p>
 
-## Download Package
-Download package in a ROS workspace.
+## Download Workspace
 ```
 git clone https://github.com/ANI717/ANI717_Robotics
 ```
