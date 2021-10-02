@@ -32,6 +32,7 @@ from geometry_msgs.msg import Twist
 #___Global Variables:
 SUBSCRIBE_TWIST_TOPIC = '/cmd_vel'
 SUBSCRIBE_IMAGE_TOPIC = '/image'
+IMAGE_FOLDER = '../images'
 DATE_FOLDER = '{0:04d}-{1:02d}-{2:02d}-{3:02d}-{4:02d}'.format(datetime.datetime.now().year,
                                                                datetime.datetime.now().month,
                                                                datetime.datetime.now().day,
@@ -69,7 +70,7 @@ class ImageSubscriber(Node):
         frame = np.reshape(msg.data, (height, width, channel))
         self.get_logger().info("Image Received")
         
-        cv2.imwrite(os.path.join('images', DATE_FOLDER , '{0:07d}'.format(self.image_count) +'_servo_'+ '{0:02d}'.format(self.z) +'_motor_'+ '{0:02d}'.format(self.x) + '.jpg'), frame)
+        cv2.imwrite(os.path.join(IMAGE_FOLDER, DATE_FOLDER , '{0:07d}_servo_{1:02d}_motor_{2:02d}.jpg'.format(self.image_count, self.z, self.x)), frame)
         self.image_count += 1
     
     
@@ -80,7 +81,7 @@ class ImageSubscriber(Node):
 
 #___Main Method:
 def main(args=None):
-    Path(os.path.join('images', DATE_FOLDER)).mkdir(parents=True, exist_ok=True)
+    Path(os.path.join(IMAGE_FOLDER, DATE_FOLDER)).mkdir(parents=True, exist_ok=True)
     rclpy.init(args=args)
     image_subscriber = ImageSubscriber()
     rclpy.spin(image_subscriber)
