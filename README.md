@@ -41,3 +41,9 @@ sudo gpasswd -a $USER input
 ```
 colcon build && . install/setup.bash && ros2 launch robot_launch gamepad_launch.py
 ```
+
+## Zip Images for Download
+```
+cd ../
+zip -r images.zip images
+```
