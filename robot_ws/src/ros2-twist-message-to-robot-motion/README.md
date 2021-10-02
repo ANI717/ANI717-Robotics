@@ -33,17 +33,6 @@ Direction: `Backward` `Left`.<br/>
 <img src="https://github.com/ANI717/ani717_gif_repository/blob/main/ros2_twist_message_to_robot_motion/jetbot_motion.gif" alt="JupytarLab Interface" class="inline"/><br/>
 
 
-## Download Package <a name="download"></a>
-Download package in a ROS2 workspace.
-```
-git clone https://github.com/ANI717/ros2-twist-message-to-robot-motion
-```
-Or update `.rosinstall` file with following command and run `rosws update` to clone this repository
-```
-- git: {local-name: src/deps/ros2-twist-message-to-robot-motion, uri: 'https://github.com/ANI717/ros2-twist-message-to-robot-motion.git', version: main}
-```
-
-
 ## Install Dependency <a name="install"></a>
 Install `traitlets`, `multiexit`, `Adafruit-SSD1306` and `Adafruit_MotorHat`.
 ```
