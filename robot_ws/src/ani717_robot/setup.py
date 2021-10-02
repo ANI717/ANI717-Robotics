@@ -1,4 +1,5 @@
 from setuptools import setup, find_packages
+from glob import glob
 
 PACKAGE_NAME = 'ani717_robot'
 
@@ -10,7 +11,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + PACKAGE_NAME]),
         ('share/' + PACKAGE_NAME, ['package.xml']),
-        ('share/' + PACKAGE_NAME + '/launch', ['launch/launch.py'])
+        ('share/' + PACKAGE_NAME + '/launch', glob('launch/*')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,

@@ -31,7 +31,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
     
     gamepad_to_twist_cmd = Node(
-        package = 'ros2-gamepad-to-twist-message',
+        package = 'ros2_gamepad_to_twist_message',
         node_executable = 'execute')
     
     twist_to_motion_cmd = Node(
