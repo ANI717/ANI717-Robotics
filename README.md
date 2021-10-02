@@ -17,6 +17,7 @@ Direction: `Backward` `Left`.<br/>
 ## Download Workspace
 ```
 git clone https://github.com/ANI717/ANI717_Robotics
+cd ~/ANI717_Robotics/robot_ws/
 ```
 
 ## Install Dependency
@@ -26,7 +27,6 @@ python3 -m pip install inputs torch torchvision opencv-python Adafruit-SSD1306 A
 ```
 Install ROS2 dependency.<br/>
 ```
-cd ~/ANI717_Robotics/robot_ws/
 rosdep update
 rosdep install --from-paths src --ignore-src -r -y
 ```
