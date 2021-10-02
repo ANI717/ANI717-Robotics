@@ -3,7 +3,7 @@
   <h1 align="center">ANI717 Robotics Workspace</h1>
 </p>
 
-Robotics workspace. Contains ROS2 packages to run robot cars controlled by gamepad, to collect annotated camera images, and to run a robot car autonomously with a trained neural network.<br/>
+Robotics workspace. Contains ROS2 packages to run robot cars controlled by gamepad, collects annotated camera images, and runs a robot car autonomously with a trained neural network.<br/>
 
 ## Colaborators
 [Animesh Bala Ani](https://www.linkedin.com/in/ani717/)<br/>
