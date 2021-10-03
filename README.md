@@ -8,12 +8,6 @@ Robotics workspace. Contains ROS2 packages to run robot cars controlled by gamep
 ## Colaborators
 [Animesh Bala Ani](https://www.linkedin.com/in/ani717/)<br/>
 
-## Demonstration <a name="demo"></a>
-Demonstration of robot movement.<br/>
-Direction: `Backward` `Left`.<br/>
-
-<img src="https://github.com/ANI717/ani717_gif_repository/blob/main/ros2_twist_message_to_robot_motion/jetbot_motion.gif" alt="JupytarLab Interface" class="inline"/><br/>
-
 ## ROS2 Packages
 [ros2-gamepad-to-twist-message](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2-gamepad-to-twist-message)<br/>
 [ros2-pytorch-model-to-twist-message](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2-pytorch-model-to-twist-message)<br/>
