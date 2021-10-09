@@ -61,11 +61,11 @@ class GamepadTwist(Node):
         
         events = get_gamepad()
         for event in events:
-            if event.code == 'ABS_RX' or event.code == 'ABS_X':
+            if event.code == 'ABS_RX':
                 self.max_z = max(abs(event.state), self.max_z)
                 self.z = event.state/self.max_z
             
-            if event.code == 'ABS_RY' or event.code == 'ABS_Y':
+            if event.code == 'ABS_Y':
                 self.max_x = max(abs(event.state), self.max_x)
                 self.x = - event.state/self.max_x
                 
