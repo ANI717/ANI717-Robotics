@@ -1,18 +1,18 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""ROS2 Robot Description Launch File.
+"""ROS2 Robot State Publish Launch File.
 
-This script provides robot description. 
+This script provides robot states. 
 
 Revision History:
 
         2021-10-22 (Animesh): Baseline Software.
 
 Example:
-        $ colcon build && source install/setup.bash && ros2 launch ros2_robot_simulation state_publisher.py
-        $ source install/setup.bash && ros2 launch ros2_robot_simulation state_publisher.py
-        $ ros2 launch ros2_robot_simulation state_publisher.py
+        $ colcon build && source install/setup.bash && ros2 launch ros2_robot_simulation states.py
+        $ source install/setup.bash && ros2 launch ros2_robot_simulation states.py
+        $ ros2 launch ros2_robot_simulation states.py
 
 
 """
@@ -34,7 +34,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
 	
     # Get the package directory
-    package_dir = get_package_share_directory('jetbot_description')
+    package_dir = get_package_share_directory('ros2_robot_simulation')
     
     
     # Create launch configuration variables
