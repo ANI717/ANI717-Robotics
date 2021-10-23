@@ -17,6 +17,7 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(ros2_world_simulation REQUIRED)
 find_package(gazebo_ros REQUIRED)
 
 install(DIRECTORY launch models rviz
