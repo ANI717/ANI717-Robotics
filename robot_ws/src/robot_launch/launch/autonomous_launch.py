@@ -31,7 +31,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
     
     pytorch_to_twist_cmd = Node(
-        package = 'ros2-pytorch-model-to-twist-message',
+        package = 'ros2_pytorch_model_to_twist_message',
         node_executable = 'execute')
     
     twist_to_motion_cmd = Node(

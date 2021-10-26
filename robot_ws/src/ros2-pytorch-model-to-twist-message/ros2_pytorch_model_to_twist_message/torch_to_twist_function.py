@@ -27,11 +27,12 @@ from sensor_msgs.msg import Image
 from geometry_msgs.msg import Twist
 from ament_index_python.packages import get_package_share_directory
 
-TORCH_MODEL = os.path.join(get_package_share_directory('ros2_pytorch_model_to_twist_message'), 
-                                                                 "torch_model")
-
+TORCH_MODEL = os.path.join(get_package_share_directory('ros2_pytorch_model_to_twist_message'), "torch_model")
 sys.path.insert(1, TORCH_MODEL)
-from _train_test import NNTools
+
+import config
+from model import NvidiaNet
+from utils import load_checkpoint, single_prediction
 
 
 #___Global Variables:
@@ -89,12 +90,12 @@ class DeeplearnTwist(Node):
     """
 
 
-    def __init__(self, servo_pred, motor_pred):
+    def __init__(self, servo_model, motor_model):
         """Constructor.
         
         Args:
-            servo_pred (object): servo/steering value prediction class object.
-            motor_pred (object): motor value prediction class object.
+            servo_model (object): servo/steering value prediction class object.
+            motor_model (object): motor value prediction class object.
         
         """
         
@@ -110,8 +111,8 @@ class DeeplearnTwist(Node):
         self.timer = self.create_timer(timer_period, self.timer_callback)
         
         # initialize prediction classes
-        self.servo_pred = servo_pred
-        self.motor_pred = motor_pred
+        self.servo_model = servo_model
+        self.motor_model = motor_model
         
         # initialize servo and motor value
         self.servo = 5
@@ -132,11 +133,10 @@ class DeeplearnTwist(Node):
         frame = np.reshape(msg.data, (height, width, channel))
         
         # makes prediction for servo and motor value from neural network
-        self.servo = self.servo_pred.predict(frame)
-        self.motor = self.motor_pred.predict(frame)
+        self.servo = single_prediction(self.servo_model, frame)
+        self.motor = single_prediction(self.motor_model, frame)
         
-        self.get_logger().info("Servo: %d, Motor: %d" % (self.servo, 
-                                                         self.motor))
+        self.get_logger().info("Servo: %d, Motor: %d" % (self.servo, self.motor))
         
         return None
 
@@ -152,15 +152,12 @@ class DeeplearnTwist(Node):
         twist = Twist()
 
         # creates Twist message
-        twist.angular.z = angular_calibration(self.servo, self.motor, 
-                                              twist.angular.z, twist.linear.x)
-        twist.linear.x = linear_calibration(self.servo, self.motor, 
-                                            twist.angular.z, twist.linear.x)
+        twist.angular.z = angular_calibration(self.servo, self.motor, twist.angular.z, twist.linear.x)
+        twist.linear.x = linear_calibration(self.servo, self.motor, twist.angular.z, twist.linear.x)
 
         # publishes message
         self.publisher_.publish(twist)
-        self.get_logger().info("Servo: %d, Motor: %d" % (self.servo, 
-                                                         self.motor))
+        self.get_logger().info("Servo: %d, Motor: %d" % (self.servo, self.motor))
 
         return None
 
@@ -174,14 +171,16 @@ def main(args=None):
     """
 
     # initialize prediction classes
-    servo_pred = NNTools(DEEP_SETTINGS, ['servo','test'], 
-                         os.path.join(TORCH_MODEL, 'servo.pth'))
-    motor_pred = NNTools(DEEP_SETTINGS, ['motor','test'], 
-                         os.path.join(TORCH_MODEL, 'motor.pth'))
+    servo_model = NvidiaNet(in_channels=3).to(config.DEVICE)
+    load_checkpoint(os.path.join(TORCH_MODEL, config.CHECKPOINT), servo_model)
+    servo_model.eval()
+    motor_model = NvidiaNet(in_channels=3).to(config.DEVICE)
+    load_checkpoint(os.path.join(TORCH_MODEL, config.CHECKPOINT), motor_model)
+    motor_model.eval()
 
     # initializes node and start publishing
     rclpy.init(args=args)
-    deeplearn_twist = DeeplearnTwist(servo_pred, motor_pred)
+    deeplearn_twist = DeeplearnTwist(servo_model, motor_model)
     rclpy.spin(deeplearn_twist)
 
     # shuts down and releases everything
