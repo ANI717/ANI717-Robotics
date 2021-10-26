@@ -8,9 +8,9 @@ ROS 2 Package to Publish Twist Message from Subscribed Sensor Image Message usin
 [Animesh Bala Ani](https://www.linkedin.com/in/ani717/)
 
 ## Install Dependency
-Install Torch, Torchvision and Opencv.
+Install Torch, Torchvision, Albumentations and Opencv.
 ```
-python3 -m pip install torch torchvision opencv-python
+python3 -m pip install torch torchvision opencv-python albumentations
 ```
 Install ROS2 dependency.
 ```
