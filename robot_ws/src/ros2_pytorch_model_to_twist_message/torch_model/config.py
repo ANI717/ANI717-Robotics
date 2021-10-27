@@ -32,7 +32,7 @@ LOAD_MODEL = False
 SAVE_MODEL = True
 WRITE_LOG = True
 
-CHECKPOINT = "checkpoint/epoch_128.pth.tar"
+CHECKPOINT = "servo.pth.tar"
 OUTPUT = 'output'
 
 TOLERENCE = 1

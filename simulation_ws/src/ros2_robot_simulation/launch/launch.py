@@ -94,7 +94,7 @@ def generate_launch_description():
     
     declare_urdf_file_cmd = DeclareLaunchArgument(
         'urdf_file',
-        default_value='jetbot.urdf')
+        default_value='jetbot.xml')
     
     
     # Specify the actions

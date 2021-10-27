@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""ROS2 Twist to Robot Motion Launch Script.
+"""ROS2 PyTorch to Twist Launch Script.
 
 This script moves Jetbot.
 
@@ -9,9 +9,9 @@ Revision History:
         2021-08-26 (Animesh): Baseline Software.
 
 Example:
-        $ colcon build && source install/setup.bash && ani717_robot autonomous_launch.py
-        $ source install/setup.bash && ros2 launch ani717_robot autonomous_launch.py
-        $ ros2 launch ani717_robot autonomous_launch.py
+        $ colcon build && source install/setup.bash && ros2 launch ros2_pytorch_model_to_twist_message launch.py
+        $ source install/setup.bash && ros2 launch ros2_pytorch_model_to_twist_message launch.py
+        $ ros2 launch ros2_pytorch_model_to_twist_message launch.py
 
 """
 
@@ -30,26 +30,16 @@ from launch_ros.actions import Node
 #___Function:
 def generate_launch_description():
     
-    pytorch_to_twist_cmd = Node(
-        package = 'ros2-pytorch-model-to-twist-message',
+    execute_cmd = Node(
+        package = 'ros2_pytorch_model_to_twist_message',
         node_executable = 'execute')
-    
-    twist_to_motion_cmd = Node(
-        package = 'ros2_twist_message_to_robot_motion',
-        node_executable = 'execute')
-    
-    cam_to_image_cmd = Node(
-        package = 'image_tools',
-        node_executable = 'cam2image')
 
         
     # Create the launch description and populate
     ld = LaunchDescription()
     
     # Add all actions
-    ld.add_action(twist_to_motion_cmd)
-    ld.add_action(pytorch_to_twist_cmd)
-    ld.add_action(cam_to_image_cmd)
+    ld.add_action(execute_cmd)
         
     return ld
 

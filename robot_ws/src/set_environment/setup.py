@@ -14,7 +14,6 @@ setup(
         'opencv-python',
         'torch',
         'torchvision',
-        'albumentations',
         'inputs'
     ]
 )
