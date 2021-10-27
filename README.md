@@ -5,7 +5,9 @@
 
 Robotics workspace. Contains ROS2 packages to run robot cars controlled by gamepad, collects annotated camera images, and runs a robot car autonomously with a trained neural network.<br/>
 
-[Computer Vision & Deep Learning Repository.](https://github.com/ANI717/Self_Driving_CV_Repository)
+[Computer Vision & Deep Learning Repository](https://github.com/ANI717/Self_Driving_CV_Repository)<br/>
+[Robot Workspace](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws)<br/>
+[Simulation Workspace](https://github.com/ANI717/ANI717_Robotics/tree/main/simulation_ws)<br/>
 
 ## Colaborators
 [Computer Fusion Laboratory (CFL) - Temple University College of Engineering](https://sites.temple.edu/cflab/people/)
