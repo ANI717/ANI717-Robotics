@@ -9,10 +9,14 @@ Robotics workspace. Contains ROS2 packages to run robot cars controlled by gamep
 [Animesh Bala Ani](https://www.linkedin.com/in/ani717/)<br/>
 
 ## ROS2 Packages
-[ros2-gamepad-to-twist-message](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2-gamepad-to-twist-message)<br/>
-[ros2-pytorch-model-to-twist-message](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2-pytorch-model-to-twist-message)<br/>
-[ros2-twist-message-to-robot-motion](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2-twist-message-to-robot-motion)<br/>
-[ros2-save-camera-image](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2-save-camera-image)<br/>
+[ros2_gamepad_to_twist_message](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2_gamepad_to_twist_message)<br/>
+[ros2_pytorch_model_to_twist_message](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2_pytorch_model_to_twist_message)<br/>
+[ros2_save_camera_image](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2_save_camera_image)<br/>
+
+[ros2_twist_message_to_robot_motion](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2_twist_message_to_robot_motion)<br/>
+
+[ros2_world_simulation](https://github.com/ANI717/ANI717_Robotics/tree/main/simulation_ws/src/ros2_world_simulation)<br/>
+[ros2_robot_simulation](https://github.com/ANI717/ANI717_Robotics/tree/main/simulation_ws/src/ros2_robot_simulation)<br/>
 
 ## Download Workspace
 ```
