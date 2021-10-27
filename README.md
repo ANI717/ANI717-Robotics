@@ -8,7 +8,10 @@ Robotics workspace. Contains ROS2 packages to run robot cars controlled by gamep
 [Computer Vision & Deep Learning Repository.](https://github.com/ANI717/Self_Driving_CV_Repository)
 
 ## Colaborators
-[Animesh Bala Ani](https://www.linkedin.com/in/ani717/)<br/>
+[Computer Fusion Laboratory (CFL) - Temple University College of Engineering](https://sites.temple.edu/cflab/people/)
+* [Animesh Bala Ani](https://www.linkedin.com/in/ani717/)<br/>
+* [Michael Nghe](https://sites.temple.edu/cflab/people/)<br/>
+* [Dr. Li Bai](https://engineering.temple.edu/about/faculty-staff/li-bai-lbai)<br/>
 
 ## ROS2 Packages
 [ros2_pytorch_model_to_twist_message](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2_pytorch_model_to_twist_message)<br/>
