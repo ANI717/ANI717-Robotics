@@ -32,5 +32,4 @@ Robotics workspace. Contains ROS2 packages to run robot cars controlled by gamep
 ## Download Workspace
 ```
 git clone https://github.com/ANI717/ANI717_Robotics
-cd ~/ANI717_Robotics/robot_ws/
 ```
