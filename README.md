@@ -9,9 +9,9 @@ Robotics workspace. Contains ROS2 packages to run robot cars controlled by gamep
 
 ## Colaborators
 [Computer Fusion Laboratory (CFL) - Temple University College of Engineering](https://sites.temple.edu/cflab/people/)
-* [Animesh Bala Ani](https://www.linkedin.com/in/ani717/)<br/>
-* [Michael Nghe](https://sites.temple.edu/cflab/people/)<br/>
-* [Dr. Li Bai](https://engineering.temple.edu/about/faculty-staff/li-bai-lbai)<br/>
+* [Animesh Bala Ani](https://www.linkedin.com/in/ani717/) (Software Development)<br/>
+* [Michael Nghe](https://sites.temple.edu/cflab/people/) (Data Collection)<br/>
+* [Dr. Li Bai](https://engineering.temple.edu/about/faculty-staff/li-bai-lbai) (Adviser)<br/>
 
 ## ROS2 Packages
 #### Common Packages:<br/>
