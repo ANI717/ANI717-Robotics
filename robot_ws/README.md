@@ -18,13 +18,14 @@ sudo gpasswd -a $USER input
 
 ## Build, Source & Launch Package (Gamepad)
 ```
-colcon build && . install/setup.bash && ros2 launch robot_launch gamepad_launch.py
+cd ~/ANI717_Robotics/robot_ws/
 colcon build --symlink-install && . install/setup.bash && ros2 launch robot_launch gamepad_launch.py
 ```
 
 ## Build, Source & Launch Package (Self Driving)
 ```
-colcon build && . install/setup.bash && ros2 launch robot_launch autonomous_launch.py
+cd ~/ANI717_Robotics/robot_ws/
+colcon build --symlink-install && . install/setup.bash && ros2 launch robot_launch autonomous_launch.py
 ```
 
 ## Zip Images for Download
