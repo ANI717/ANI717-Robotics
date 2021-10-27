@@ -14,15 +14,18 @@ Robotics workspace. Contains ROS2 packages to run robot cars controlled by gamep
 * [Dr. Li Bai](https://engineering.temple.edu/about/faculty-staff/li-bai-lbai)<br/>
 
 ## ROS2 Packages
-[ros2_pytorch_model_to_twist_message](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2_pytorch_model_to_twist_message)<br/>
-[ros2_save_camera_image](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2_save_camera_image)<br/>
+#### Common Packages:<br/>
+* [ros2_pytorch_model_to_twist_message](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2_pytorch_model_to_twist_message)<br/>
+* [ros2_save_camera_image](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2_save_camera_image)<br/>
 
-[ros2_gamepad_to_twist_message](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2_gamepad_to_twist_message)<br/>
-[ros2_twist_message_to_robot_motion](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2_twist_message_to_robot_motion)<br/>
+#### Robot Packages:<br/>
+* [ros2_gamepad_to_twist_message](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2_gamepad_to_twist_message)<br/>
+* [ros2_twist_message_to_robot_motion](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2_twist_message_to_robot_motion)<br/>
 
-[ros2_keyboard_to_twist_message](https://github.com/ANI717/ANI717_Robotics/tree/main/simulation_ws/src/ros2_keyboard_to_twist_message)<br/>
-[ros2_world_simulation](https://github.com/ANI717/ANI717_Robotics/tree/main/simulation_ws/src/ros2_world_simulation)<br/>
-[ros2_robot_simulation](https://github.com/ANI717/ANI717_Robotics/tree/main/simulation_ws/src/ros2_robot_simulation)<br/>
+#### Simulation Packages:<br/>
+* [ros2_keyboard_to_twist_message](https://github.com/ANI717/ANI717_Robotics/tree/main/simulation_ws/src/ros2_keyboard_to_twist_message)<br/>
+* [ros2_world_simulation](https://github.com/ANI717/ANI717_Robotics/tree/main/simulation_ws/src/ros2_world_simulation)<br/>
+* [ros2_robot_simulation](https://github.com/ANI717/ANI717_Robotics/tree/main/simulation_ws/src/ros2_robot_simulation)<br/>
 
 ## Download Workspace
 ```
