@@ -15,6 +15,7 @@ setup(
         'torch',
         'torchvision',
         'albumentations',
+        'getch',
         'inputs'
     ]
 )
