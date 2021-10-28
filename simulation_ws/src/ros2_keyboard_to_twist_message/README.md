@@ -5,9 +5,9 @@
 ROS 2 Package to Publish Gamepad Controller Inputs to Twist Message for Robot Movement.<br/>
 
 ## Install Dependency
-Install `Keyboard`.<br/>
+Install `Getch`.<br/>
 ```
-python3 -m pip install keyboard
+python3 -m pip install getch
 ```
 Install ROS2 dependency.<br/>
 ```
