@@ -9,9 +9,9 @@ Revision History:
         2021-08-26 (Animesh): Baseline Software.
 
 Example:
-        $ colcon build && source install/setup.bash && ani717_robot autonomous_launch.py
-        $ source install/setup.bash && ros2 launch ani717_robot autonomous_launch.py
-        $ ros2 launch ani717_robot autonomous_launch.py
+        $ colcon build --symlink-install && . install/setup.bash && ros2 launch robot_launch autonomous_launch.py
+        $ . install/setup.bash && ros2 launch robot_launch autonomous_launch.py
+        $ ros2 launch robot_launch autonomous_launch.py
 
 """
 
