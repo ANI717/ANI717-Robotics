@@ -62,20 +62,20 @@ def generate_launch_description():
     
     declare_world_cmd = DeclareLaunchArgument(
         'world',
-        default_value=os.path.join(ros2_world_simulation_dir, 'worlds', 'empty.world'),
+        default_value=os.path.join(ros2_world_simulation_dir, 'worlds', 'racetrack_day.world'),
         description='Full path to world model file to load')
     
     declare_x_pos_cmd = DeclareLaunchArgument(
         'x_pos',
-        default_value='0.0')
+        default_value='2.75')
     
     declare_y_pos_cmd = DeclareLaunchArgument(
         'y_pos',
-        default_value='0.0')
+        default_value='-14.0')
     
     declare_z_pos_cmd = DeclareLaunchArgument(
         'z_pos',
-        default_value='0.0')
+        default_value='0.5')
     
     declare_roll_cmd = DeclareLaunchArgument(
         'roll',
