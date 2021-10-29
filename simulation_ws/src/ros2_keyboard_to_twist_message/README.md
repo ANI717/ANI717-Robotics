@@ -19,8 +19,3 @@ rosdep install --from-paths src --ignore-src -r -y
 ```
 colcon build && . install/setup.bash && ros2 run ros2_keyboard_to_twist_message execute
 ```
-
-## Launch Package
-```
-colcon build && . install/setup.bash && ros2 launch ros2_keyboard_to_twist_message launch.py
-```
