@@ -54,7 +54,8 @@ Terminal 1
 ```
 cd ANI717_Robotics/simulation_ws/
 export DISPLAY=:0
-colcon build --symlink-install && . install/setup.bash && ros2 launch simulation_launch keyboard_launch.py
+colcon build --symlink-install && . install/setup.bash
+ros2 launch simulation_launch keyboard_launch.py
 ```
 
 Terminal 2
