@@ -70,6 +70,12 @@ class GamepadTwist(Node):
         if getch.getch() == 's':
             self.x = max(-self.max_x, self.x - 0.1)
         
+        if getch.getch() == 'k':
+            self.x = 0.0
+        
+        if getch.getch() == 'l':
+            self.z = 0.0
+        
         # creates Twist message
         twist.angular.z = self.z
         twist.linear.x = self.x
