@@ -18,6 +18,7 @@ Robotics workspace. Contains ROS2 packages to run robot cars controlled by gamep
 
 ## Design Diagram
 <img src="https://github.com/ANI717/ANI717_Robotics/blob/main/Robot%20Workspace.png" alt="Robot Workspace Diagram" class="inline"/><br/>
+<img src="https://github.com/ANI717/ANI717_Robotics/blob/main/Simulation%20Workspace.png" alt="Simulation Workspace Diagram" class="inline"/><br/>
 
 ## ROS2 Packages
 #### Common Packages:<br/>
