@@ -83,5 +83,6 @@ colcon build --symlink-install && . install/setup.bash && ros2 launch robot_laun
 ```
 
 ## Acknowledgement
+[Jetbot](https://jetbot.org/master/)<br/>
 [Jetbot URDF Mesh](https://github.com/aws-samples/aws-robomaker-jetbot-ros)<br/>
 [AWS Robomaker Racetrack World](https://github.com/aws-robotics/aws-robomaker-racetrack-world)<br/>
