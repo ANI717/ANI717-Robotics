@@ -73,5 +73,5 @@ ros2 launch simulation_launch autonomous_launch.py
 ```
 
 ## Acknowledgement
-[Jetbot URDF File](https://github.com/aws-samples/aws-robomaker-jetbot-ros)<br/>
+[Jetbot URDF](https://github.com/aws-samples/aws-robomaker-jetbot-ros)<br/>
 [AWS Robomaker Racetrack World](https://github.com/aws-robotics/aws-robomaker-racetrack-world)<br/>
