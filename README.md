@@ -16,6 +16,9 @@ Robotics workspace. Contains ROS2 packages to run robot cars controlled by gamep
 * [Michael Nghe](https://sites.temple.edu/cflab/people/) (Data Collection)<br/>
 * [Dr. Li Bai](https://engineering.temple.edu/about/faculty-staff/li-bai-lbai) (Academic Advisor)<br/>
 
+## Design Diagram
+<img src="https://github.com/ANI717/ANI717_Robotics/blob/main/Robot%20Workspace.png" alt="Robot Workspace Diagram" class="inline"/><br/>
+
 ## ROS2 Packages
 #### Common Packages:<br/>
 * [ros2_pytorch_model_to_twist_message](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2_pytorch_model_to_twist_message)<br/>
