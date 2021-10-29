@@ -20,7 +20,7 @@ colcon build --symlink-install && . install/setup.bash && ros2 launch simulation
 Terminal 2
 ```
 cd ANI717_Robotics/simulation_ws/
-. install/setup.bash && ros2 run simulation_launch execute
+. install/setup.bash && ros2 run ros2_keyboard_to_twist_message execute
 ```
 
 ## Build, Source & Launch Package (Self Driving)
