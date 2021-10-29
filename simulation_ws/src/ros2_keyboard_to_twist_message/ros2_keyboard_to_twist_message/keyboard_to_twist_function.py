@@ -59,9 +59,11 @@ class GamepadTwist(Node):
         twist = Twist()
         
         if getch.getch() == 'a':
+            self.z = max(0.0, self.z)
             self.z = min(self.max_z, self.z + 0.1)
                 
         if getch.getch() == 'd':
+            self.z = min(0.0, self.z)
             self.z = max(-self.max_z, self.z - 0.1)
         
         if getch.getch() == 'w':
