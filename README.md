@@ -58,7 +58,13 @@ colcon build --symlink-install && . install/setup.bash
 ros2 launch simulation_launch keyboard_launch.py
 ```
 
-Terminal 2
+Terminal 2 (Run following commands and select `/image` as *Image View*
+```
+export DISPLAY=:0
+rqt
+```
+
+Terminal 3
 ```
 cd ANI717_Robotics/simulation_ws/
 . install/setup.bash && ros2 run ros2_keyboard_to_twist_message execute
