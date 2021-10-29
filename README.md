@@ -57,6 +57,14 @@ cd ANI717_Robotics/simulation_ws/
 . install/setup.bash && ros2 run ros2_keyboard_to_twist_message execute
 ```
 
+#### Build, Source & Launch Package (Self Driving)
+```
+cd ANI717_Robotics/simulation_ws/
+export DISPLAY=:0
+colcon build --symlink-install && . install/setup.bash
+ros2 launch simulation_launch autonomous_launch.py
+```
+
 ## Robot Workspace
 #### Build, Source & Launch Package (Gamepad)
 ```
@@ -68,14 +76,6 @@ colcon build --symlink-install && . install/setup.bash && ros2 launch robot_laun
 ```
 cd ~/ANI717_Robotics/robot_ws/
 colcon build --symlink-install && . install/setup.bash && ros2 launch robot_launch autonomous_launch.py
-```
-
-#### Build, Source & Launch Package (Self Driving)
-```
-cd ANI717_Robotics/simulation_ws/
-export DISPLAY=:0
-colcon build --symlink-install && . install/setup.bash
-ros2 launch simulation_launch autonomous_launch.py
 ```
 
 ## Acknowledgement
