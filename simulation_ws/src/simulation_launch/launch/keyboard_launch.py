@@ -115,10 +115,6 @@ def generate_launch_description():
         PythonLaunchDescriptionSource(os.path.join(ros2_robot_simulation_dir, 'launch', 'states.py')),
         launch_arguments={'urdf': urdf_file,}.items())
     
-    keyboard_to_twist_cmd = Node(
-        package = 'ros2_keyboard_to_twist_message',
-        executable = 'execute')
-    
     save_image_cmd = Node(
         package = 'ros2_save_camera_image',
         executable = 'execute')
@@ -143,7 +139,6 @@ def generate_launch_description():
     ld.add_action(world_launch_cmd)
     ld.add_action(spawn_robot_cmd)
     ld.add_action(robot_states_cmd)
-    ld.add_action(keyboard_to_twist_cmd)
     ld.add_action(save_image_cmd)
         
     return ld

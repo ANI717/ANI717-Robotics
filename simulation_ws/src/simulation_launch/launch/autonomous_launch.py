@@ -119,10 +119,6 @@ def generate_launch_description():
         package = 'ros2_pytorch_model_to_twist_message',
         executable = 'execute')
     
-    save_image_cmd = Node(
-        package = 'ros2_save_camera_image',
-        executable = 'execute')
-    
     
     # Create the launch description and populate
     ld = LaunchDescription()
@@ -144,7 +140,6 @@ def generate_launch_description():
     ld.add_action(spawn_robot_cmd)
     ld.add_action(robot_states_cmd)
     ld.add_action(pytorch_to_twist_cmd)
-    ld.add_action(save_image_cmd)
         
     return ld
 
