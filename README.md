@@ -71,3 +71,7 @@ export DISPLAY=:0
 colcon build --symlink-install && . install/setup.bash
 ros2 launch simulation_launch autonomous_launch.py
 ```
+
+## Acknowledgement
+[Jetbot URDF File](https://github.com/aws-samples/aws-robomaker-jetbot-ros)
+[AWS Robomaker Racetrack World](https://github.com/aws-robotics/aws-robomaker-racetrack-world)
