@@ -95,12 +95,15 @@ def generate_launch_description():
     
     
     # Specify the actions
-    robot_simulation_cmd = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(os.path.join(ros2_robot_simulation_dir, 'launch', 'spawn.py')),
+    world_launch_cmd = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(os.path.join(ros2_world_simulation_dir, 'launch', 'launch.py')),
         launch_arguments={'use_simulator': use_simulator,
                           'headless': headless,
-                          'world': world,
-                          'x_pos': x_pos,
+                          'world': world}.items())
+    
+    spawn_robot_cmd = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(os.path.join(ros2_robot_simulation_dir, 'launch', 'spawn.py')),
+        launch_arguments={'x_pos': x_pos,
                           'y_pos': y_pos,
                           'z_pos': z_pos,
                           'roll': roll,
@@ -108,13 +111,17 @@ def generate_launch_description():
                           'yaw': yaw,
                           'urdf': urdf_file}.items())
     
+    robot_states_cmd = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(os.path.join(ros2_robot_simulation_dir, 'launch', 'states.py')),
+        launch_arguments={'urdf': urdf_file,}.items())
+    
     pytorch_to_twist_cmd = Node(
         package = 'ros2_pytorch_model_to_twist_message',
-        node_executable = 'execute')
+        executable = 'execute')
     
     save_image_cmd = Node(
         package = 'ros2_save_camera_image',
-        node_executable = 'execute')
+        executable = 'execute')
     
     
     # Create the launch description and populate
@@ -133,7 +140,9 @@ def generate_launch_description():
     ld.add_action(declare_urdf_file_cmd)
     
     # Add all actions
-    ld.add_action(robot_simulation_cmd)
+    ld.add_action(world_launch_cmd)
+    ld.add_action(spawn_robot_cmd)
+    ld.add_action(robot_states_cmd)
     ld.add_action(pytorch_to_twist_cmd)
     ld.add_action(save_image_cmd)
         
