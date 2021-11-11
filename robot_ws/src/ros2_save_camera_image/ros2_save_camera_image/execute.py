@@ -77,7 +77,7 @@ class ImageSubscriber(Node):
         self.get_logger().info("Image Received")
         
         # write image with annotation in name
-        cv2.imwrite(os.path.join(self.image_folder, '{0:07d}_servo_{1:02d}_motor_{2:02d}.jpg'.format(self.image_count, self.z, self.x)), frame)
+        cv2.imwrite(os.path.join(self.image_folder, '{0:07d}_z{1:02d}_x{2:02d}.jpg'.format(self.image_count, self.z, self.x)), frame)
         self.image_count += 1
     
     
