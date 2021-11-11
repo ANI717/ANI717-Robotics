@@ -9,7 +9,6 @@ ROS 2 Package to Save Camera Image Published in ROS2 Topic along with Geometry T
 
 ## Table of Contents
 * [Install Dependency](#install) <br/>
-* [Add User to Input Group](#user) <br/>
 * [Build, Source & Launch Package](#launch) <br/>
 * [Miscellaneous](#miscellaneous) <br/>
 
