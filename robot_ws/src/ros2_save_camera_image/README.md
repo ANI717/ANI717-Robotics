@@ -37,7 +37,7 @@ colcon build --symlink-install && source install/local_setup.bash && ros2 launch
 
 ## Miscellaneous <a name="miscellaneous"></a>
 Select `True` by editing `line 38` of `launch/launch.py` file to launch `ros2 cam2image` for collecting image data with camera.<br/>
-Or use this names as arguments for `cam2image`.<br/>
+Or use `True` as argument for `cam2image`.<br/>
 Default `cam2image`:`True`<br/> 
 
 Edit `settings.json` file to assign `image topic`, `twist topic` and `data directory`.<br/>
