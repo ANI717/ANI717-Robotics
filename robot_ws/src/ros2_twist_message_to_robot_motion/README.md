@@ -55,4 +55,10 @@ colcon build --symlink-install && source install/local_setup.bash && ros2 launch
 ```
 
 ## Miscellaneous <a name="miscellaneous"></a>
-Modify `XCAL` and `ZCAL` from `ros2_twist_message_to_robot_motion/jetbot_motion.py` or `ros2_twist_message_to_robot_motion/adafruit_motion.py` script.
+Select Robot type from `jetbot` or `adafruit` by editing `line 35` of `launch/launch.py` file.<br/>
+Or use this names as arguments for `robot_type`.<br/>
+Default `robot_type`:`jetbot`<br/> 
+
+Edit `settings.json` file to assign `x_calibration` and `z_calibration`.<br/>
+Default `x_calibration`:`0.50`<br/> 
+Default `z_calibration`:`0.25`<br/>
