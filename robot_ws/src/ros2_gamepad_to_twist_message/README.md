@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center">A Generalized ROS 2 Package to Publish Gamepad Data as Twist Message</h1>
+  <h1 align="center">ROS 2 Package to Publish Gamepad Data as Twist Message</h1>
 </p>
 
 ROS 2 Package to Publish Gamepad Controller Data as Twist Message for Robot Movement.<br/>
