@@ -10,9 +10,9 @@ Revision History:
         2021-10-01 (ANI717 - Animesh Bala Ani): Baseline Software.
 
 Example:
-        $ colcon build --symlink-install && source install/local_setup.bash && ros2 run ros2_gamepad_to_twist_message logitech
-        $ source install/local_setup.bash && ros2 run ros2_gamepad_to_twist_message logitech
-        $ ros2 run ros2_gamepad_to_twist_message logitech
+        $ colcon build --symlink-install && source install/local_setup.bash && ros2 run ros2_gamepad_to_twist_message waveshare
+        $ source install/local_setup.bash && ros2 run ros2_gamepad_to_twist_message waveshare
+        $ ros2 run ros2_gamepad_to_twist_message waveshare
 
 """
 
