@@ -5,7 +5,7 @@ package_name = 'ros2_twist_message_to_robot_motion'
 
 setup(
     name=package_name,
-    version='0.0.0',
+    version='1.0.0',
     packages=[package_name],
     data_files=[
         ('share/ament_index/resource_index/packages',
