@@ -1,28 +1,30 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 from glob import glob
 
-PACKAGE_NAME = 'ros2_gamepad_to_twist_message'
+package_name = 'ros2_gamepad_to_twist_message'
 
 setup(
-    name=PACKAGE_NAME,
-    version='0.0.0',
-    packages=find_packages(),
+    name=package_name,
+    version='1.0.0',
+    packages=[package_name],
     data_files=[
         ('share/ament_index/resource_index/packages',
-            ['resource/' + PACKAGE_NAME]),
-        ('share/' + PACKAGE_NAME, ['package.xml']),
-        ('share/' + PACKAGE_NAME + '/launch', ['launch/launch.py']),
+            ['resource/' + package_name]),
+        ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name, ['settings.json']),
+        ('share/' + package_name + '/launch', glob('launch/*')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='ANI717',
+    maintainer='ANI717 (Animesh Bala Ani)',
     maintainer_email='animesh.ani@live.com',
-    description='Package to Publish Gamepad Data to Twist Message for Robot Running',
+    description='Package to Publish Gamepad Data as Twist Message for Robot Running',
     license='MIT License',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'execute = ros2_gamepad_to_twist_message.gamepad_to_twist_function:main',
+            'logitech = ros2_gamepad_to_twist_message.logitech:main',
+            'waveshare = ros2_gamepad_to_twist_message.waveshare:main',
         ],
     },
 )
