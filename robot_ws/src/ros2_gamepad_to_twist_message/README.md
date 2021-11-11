@@ -34,7 +34,7 @@ colcon build --symlink-install && source install/local_setup.bash && ros2 launch
 
 ## Miscellaneous
 Select Gamepad type from `logitech` or `waveshare` by editing `line 31` of `launch/launch.py` file.<br/>
-Or use this names as arguments for `gamepad_type`<br/>
+Or use this names as arguments for `gamepad_type`.<br/>
 Default `gamepad_type`:`logitech`<br/> 
 <br/>
 Edit `settings.json` file to assign `publish topic` and `publish frequency`.<br/>
