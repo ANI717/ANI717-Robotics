@@ -60,6 +60,11 @@ class Twist_to_Motion(Node):
 
 
     def listener_callback(self, msg):
+        """Listener Callback Function
+        
+        This method collects data from geometry twist message topic and runs robot.
+        
+        """
         
         # parses data from subscribed topic message
         x = self.x_calibration*float(msg.linear.x)
