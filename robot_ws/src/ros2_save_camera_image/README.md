@@ -45,5 +45,8 @@ Default `image topic`:`\images`<br/>
 Default `twist topic`:`\cmd_vel`<br/> 
 Default `data directory`:`..\images`<br/>
 
-Collected `linear.x` and `angular.z` data from geometry twist message are considered as `motor` and `servo` value. The images are saved with this values in name. Which means annotations are embeded in the image name. The images are saved in a subfolder with name containing year, month, date, hour and minute data.
-`images/year_month_day_hour_minute/0000001_servo_05_motor_05.jpg`:`images/2021_11_11_11_11/0000001_servo_05_motor_05.jpg`
+Collected `linear.x` and `angular.z` data from geometry twist message are mapped as `motor` and `servo` value. The values are mapped from the range of `-1 to +1` to `0 to 10`. Then the images are saved with this values in their name. Which means annotations are embeded in the image name.
+Example `counter_servo_value_motor_value.jpg`:`0000001_servo_05_motor_05.jpg`
+
+The images are saved in a subfolder with name containing year, month, date, hour and minute data.
+Example `images/year_month_day_hour_minute/counter_servo_value_motor_value.jpg`:`images/2021_11_11_11_11/0000001_servo_05_motor_05.jpg`
