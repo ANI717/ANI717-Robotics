@@ -31,4 +31,4 @@ ros2 launch ros2_gamepad_to_twist_message launch.py
 ```
 colcon build --symlink-install && source install/local_setup.bash && ros2 launch ros2_gamepad_to_twist_message launch.py
 ```
-Select Gamepad type by from `logitech` or `waveshare` by editing `line 31` of `launch.py` file. Or use this names as arguments for `gamepad_type`<br/>
+Select Gamepad type from `logitech` or `waveshare` by editing `line 31` of `launch.py` file. Or use this names as arguments for `gamepad_type`<br/>
