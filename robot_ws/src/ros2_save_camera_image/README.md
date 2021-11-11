@@ -44,3 +44,6 @@ Edit `settings.json` file to assign `image topic`, `twist topic` and `data direc
 Default `image topic`:`\images`<br/>
 Default `twist topic`:`\cmd_vel`<br/> 
 Default `data directory`:`..\images`<br/>
+
+Collected `linear.x` and `angular.z` data from geometry twist message are considered as `motor` and `servo` value. The images are saved with this values in name. Which means annotations are embeded in the image name. The images are saved in a subfolder with name containing year_month_date_hour_minute data.
+`images/year_month_day_hour_minute/0000001_servo_05_motor_05.jpg`:`images/2021_11_11_11_11/0000001_servo_05_motor_05.jpg`
