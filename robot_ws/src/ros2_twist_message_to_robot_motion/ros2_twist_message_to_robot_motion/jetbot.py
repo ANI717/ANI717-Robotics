@@ -3,22 +3,23 @@
 
 """ROS2 Twist to Jetbot Move.
 
-This script subscribes to "/cmd_vel" topic, reads Twist message, and moves the
-Jetbot.
+This script subscribes to "/cmd_vel" topic, reads Twist message, and moves a 
+robot car.
 
 Revision History:
-        2021-08-18 (Animesh): Baseline Software.
+        2021-08-18 (ANI717 - Animesh Bala Ani): Baseline Software.
 
 Example:
-        $ colcon build && source install/setup.bash && ros2 run ros2_twist_message_to_robot_motion execute
-        $ source install/setup.bash && ros2 run ros2_twist_message_to_robot_motion execute
-        $ ros2 run ros2_twist_message_to_robot_motion execute
+        $ colcon build --symlink-install && source install/local_setup.bash && ros2 run ros2_twist_message_to_robot_motion jetbot
+        $ source install/local_setup.bash && ros2 run ros2_twist_message_to_robot_motion jetbot
+        $ ros2 run ros2_twist_message_to_robot_motion jetbot
 
 """
 
 
 #___Import Modules:
-
+import os
+import json
 import atexit
 from Adafruit_MotorHAT import Adafruit_MotorHAT
 import traitlets
@@ -27,23 +28,22 @@ from traitlets.config.configurable import Configurable, SingletonConfigurable
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
+from ament_index_python.packages import get_package_share_directory
 
 
 #___Global Variables:
-SUBSCRIBE_TOPIC = '/cmd_vel'
-XCAL = 0.25 #Calibration X
-ZCAL = 0.25 #Calibration Z
+SETTINGS = os.path.join(get_package_share_directory('ros2_twist_message_to_robot_motion'), "settings.json")
 
 
 #__Classes
 class Twist_to_Motion(Node):
     """TWIST to Jetbot Move Class.
     
-    This class contains all methods to read TWIST message and move the Jetbot. 
+    This class contains all methods to read TWIST message and move a robot car. 
     
     """
 
-    def __init__(self):
+    def __init__(self, subscribe_topic='/cmd_vel', x_calibration=0.25, z_calibration=0.25):
         
         super().__init__('twist_to_motion')
         
@@ -51,19 +51,19 @@ class Twist_to_Motion(Node):
         self.robot = Robot()
         
         # initialize subscriber
-        self.subscription = self.create_subscription(
-            Twist,
-            SUBSCRIBE_TOPIC,
-            self.listener_callback,
-            10)
+        self.subscription = self.create_subscription(Twist, subscribe_topic, self.listener_callback, 1)
         self.subscription  # prevent unused variable warning
+        
+        # initialize variables
+        self.x_calibration = x_calibration
+        self.z_calibration = z_calibration
 
 
     def listener_callback(self, msg):
         
         # parses data from subscribed topic message
-        x = XCAL*float(msg.linear.x)
-        z = ZCAL*float(msg.angular.z)
+        x = self.x_calibration*float(msg.linear.x)
+        z = self.z_calibration*float(msg.angular.z)
         
         # control robot movement
         # both wheel same state
@@ -72,34 +72,34 @@ class Twist_to_Motion(Node):
             if x == 0:
                 self.robot.stop()
             else:
-                self.robot.set_motors(x, x)
+                self.robot.set_motors(-x, -x)
         
         # one wheel moving
-        elif x == 0:
+        if x == 0:
             # rotate right
             if z > 0:
-                self.robot.set_motors(z, 0)
+                self.robot.set_motors(0, -z)
             # rotate left
             elif z < 0:
-                self.robot.set_motors(0, z)
+                self.robot.set_motors(-z, 0)
         
         # moving forward
         elif x > 0:
             # rotate right
             if z > 0:
-                self.robot.set_motors((x+z)/2, x/2)
+                self.robot.set_motors(-x/2, -(x+z)/2)
             # rotate left
             elif z < 0:
-                self.robot.set_motors(x/2, (x-z)/2)
+                self.robot.set_motors(-(x-z)/2, -x/2)
         
         # moving backward
         elif x < 0:
             # rotate right
             if z > 0:
-                self.robot.set_motors((x-z)/2, x/2)
+                self.robot.set_motors(-x/2, -(x-z)/2)
             # rotate left
             elif z < 0:
-                self.robot.set_motors(x/2, (x+z)/2)
+                self.robot.set_motors(-(x+z)/2, -x/2)
 
 
 
@@ -201,10 +201,20 @@ class Robot(SingletonConfigurable):
 
 #___Main Method:
 def main(args=None):
+    """This is the Main Method.
+    
+    """
+    
+    # parse settings from json file
+    with open(SETTINGS) as fp:
+        content = json.load(fp)
+        subscribe_topic = content["subscribe_topic"]
+        x_calibration = content["x_calibration"]
+        z_calibration = content["z_calibration"]
+    
+    # initializes node and run robot car
     rclpy.init(args=args)
-
-    twist_to_motion = Twist_to_Motion()
-
+    twist_to_motion = Twist_to_Motion(subscribe_topic, x_calibration, z_calibration)
     rclpy.spin(twist_to_motion)
 
     # Destroy the node explicitly
