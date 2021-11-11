@@ -12,11 +12,9 @@ A generalized ROS2 package to move `Nvidia Jetbot` or any `Adafruit MotorHat` dr
 ## Table of Contents
 * [Key Mapping](#key) <br/>
 * [Demonstration](#demo) <br/>
-* [Download Package](#download) <br/>
 * [Install Dependency](#install) <br/>
-* [Build, Source & Run Package](#run) <br/>
-* [Launch Package](#launch) <br/>
-* [Calibration](#calibration) <br/>
+* [Build, Source & Launch Package](#launch) <br/>
+* [Miscellaneous](#miscellaneous) <br/>
 
 
 ## Key Mapping <a name="key"></a>
@@ -40,22 +38,21 @@ python3 -m pip install Adafruit-SSD1306 Adafruit_MotorHat traitlets multiexit
 ```
 Install ROS2 dependency.
 ```
+sudo apt-get update
+rosdep update
 rosdep update && rosdep install --from-paths src --ignore-src -r -y
 ```
 
 
-## Build, Source & Run Package <a name="run"></a>
+## Build, Source & Run Package <a name="launch"></a>
 ```
-colcon build && source install/setup.bash && ros2 run ros2_twist_message_to_robot_motion execute
-```
-Contains one executable node named `execute`.
-
-
-## Launch Package <a name="launch"></a>
-```
+colcon build --symlink-install --packages-select ros2_gamepad_to_twist_message
+source install/local_setup.bash
 ros2 launch ros2_twist_message_to_robot_motion launch.py
 ```
+```
+colcon build --symlink-install && source install/local_setup.bash && ros2 launch ros2_twist_message_to_robot_motion launch.py
+```
 
-
-## Calibration <a name="calibration"></a>
+## Miscellaneous <a name="miscellaneous"></a>
 Modify `XCAL` and `ZCAL` from `ros2_twist_message_to_robot_motion/jetbot_motion.py` or `ros2_twist_message_to_robot_motion/adafruit_motion.py` script.
