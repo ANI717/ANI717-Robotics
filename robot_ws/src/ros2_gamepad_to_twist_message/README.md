@@ -2,7 +2,7 @@
   <h1 align="center">ROS 2 Gamepad to Twist Message Package</h1>
 </p>
 
-ROS 2 Package to Publish Gamepad Controller Inputs as Twist Message for Robot Movement.<br/>
+ROS 2 Package to Publish Gamepad Controller Data as Twist Message for Robot Movement.<br/>
 
 ## Install Dependency
 Install `Inputs`.<br/>
@@ -31,3 +31,4 @@ ros2 launch ros2_gamepad_to_twist_message launch.py
 ```
 colcon build --symlink-install && source install/local_setup.bash && ros2 launch ros2_gamepad_to_twist_message launch.py
 ```
+Select Gamepad type by from `logitech` or `waveshare` by editing line 31 of `launch.py` file.<br/>
