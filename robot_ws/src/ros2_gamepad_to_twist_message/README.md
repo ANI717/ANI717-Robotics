@@ -7,6 +7,13 @@ ROS 2 Package to Publish Gamepad Controller Data as Twist Message for Robot Move
 ## Colaborators
 [Animesh Bala Ani](https://www.linkedin.com/in/ani717/)
 
+## Table of Contents
+* [Key Mapping](#key) <br/>
+* [Install Dependency](#install) <br/>
+* [Add User to Input Group](#user) <br/>
+* [Build, Source & Launch Package](#launch) <br/>
+* [Miscellaneous](#miscellaneous) <br/>
+
 ## Key Mapping <a name="key"></a>
 `Left Joystick Up`:`+ linear.x`<br/>
 `Left Joystick Down`:`- linear.x`<br/>
@@ -16,7 +23,7 @@ ROS 2 Package to Publish Gamepad Controller Data as Twist Message for Robot Move
 `linear.x range`:`-1 to +1`<br/>
 `angular.z range`:`-1 to +1`<br/>
 
-## Install Dependency
+## Install Dependency <a name="install"></a>
 Install `Inputs`.<br/>
 ```
 python3 -m pip install inputs
@@ -28,13 +35,13 @@ rosdep update
 rosdep install --from-paths src --ignore-src -r -y
 ```
 
-## Add User to Input Group
+## Add User to Input Group <a name="user"></a>
 Run following command and reboot.<br/>
 ```
 sudo gpasswd -a $USER input
 ```
 
-## Build, Source & Launch Package
+## Build, Source & Launch Package <a name="launch"></a>
 ```
 colcon build --symlink-install --packages-select ros2_gamepad_to_twist_message
 source install/local_setup.bash
@@ -44,7 +51,7 @@ ros2 launch ros2_gamepad_to_twist_message launch.py
 colcon build --symlink-install && source install/local_setup.bash && ros2 launch ros2_gamepad_to_twist_message launch.py
 ```
 
-## Miscellaneous
+## Miscellaneous <a name="miscellaneous"></a>
 Select Gamepad type from `logitech` or `waveshare` by editing `line 31` of `launch/launch.py` file.<br/>
 Or use this names as arguments for `gamepad_type`.<br/>
 Default `gamepad_type`:`logitech`<br/> 
