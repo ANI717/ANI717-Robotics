@@ -30,8 +30,6 @@ from ament_index_python.packages import get_package_share_directory
 
 #___Global Variables:
 SETTINGS = os.path.join(get_package_share_directory('ros2_gamepad_to_twist_message'), "settings.json")
-PUBLISH_TOPIC = '/cmd_vel'
-PUBLISH_FREQUENCY = 100 # in Hz
 
 
 #__Classes
@@ -42,7 +40,7 @@ class GamepadTwist(Node):
     
     """
 
-    def __init__(self, publish_topic=PUBLISH_TOPIC, publish_frequency=PUBLISH_FREQUENCY):
+    def __init__(self, publish_topic='/cmd_vel', publish_frequency=100):
         super().__init__('gamepad_publisher')
         
         # publisher initialization
