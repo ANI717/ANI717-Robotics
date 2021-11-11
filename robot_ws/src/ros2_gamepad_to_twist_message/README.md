@@ -12,7 +12,8 @@ ROS 2 Package to Publish Gamepad Controller Data as Twist Message for Robot Move
 * [Install Dependency](#install) <br/>
 * [Add User to Input Group](#user) <br/>
 * [Build, Source & Launch Package](#launch) <br/>
-* [Miscellaneous](#miscellaneous) <br/>
+* [Launch Arguments](#arg) <br/>
+* [Settings](#set) <br/>
 
 ## Key Mapping <a name="key"></a>
 `Left Joystick Up`:`+ linear.x`<br/>
@@ -51,11 +52,12 @@ ros2 launch ros2_gamepad_to_twist_message launch.py
 colcon build --symlink-install && source install/local_setup.bash && ros2 launch ros2_gamepad_to_twist_message launch.py
 ```
 
-## Miscellaneous <a name="miscellaneous"></a>
+## Launch Arguments <a name="arg"></a>
 Select Gamepad type from `logitech` or `waveshare` by editing `line 31` of `launch/launch.py` file.<br/>
 Or use this names as arguments for `gamepad_type`.<br/>
 Default `gamepad_type`:`logitech`<br/> 
 
+## Settings <a name="set"></a>
 Edit `settings.json` file to assign `publish topic` and `publish frequency`.<br/>
 Default `publish topic`:`\cmd_vel`<br/> 
 Default `publish frequency`:`100`<br/>
