@@ -3,7 +3,7 @@
 <package format="3">
   <name>ros2_twist_message_to_robot_motion</name>
   <version>1.0.0</version>
-  <description>'Package to Run Robots Subscribed to Geometry Twist Message'</description>
+  <description>Package to Run Robots Subscribed to Geometry Twist Message</description>
   <maintainer email="animesh.ani@live.com">ANI717 (Animesh Bala Ani)</maintainer>
   <license>MIT License</license>
 
