@@ -3,7 +3,7 @@
 <package format="3">
   <name>ros2_gamepad_to_twist_message</name>
   <version>1.0.0</version>
-  <description>'Package to Publish Gamepad Data as Twist Message for Robot Running'</description>
+  <description>Package to Publish Gamepad Data as Twist Message for Robot Running</description>
   <maintainer email="animesh.ani@live.com">ANI717 (Animesh Bala Ani)</maintainer>
   <license>MIT License</license>
 
