@@ -3,7 +3,7 @@
 <package format="3">
   <name>ros2_save_camera_image</name>
   <version>1.0.0</version>
-  <description>'ROS2 Package to Save Camera Image'</description>
+  <description>ROS2 Package to Save Camera Image</description>
   <maintainer email="animesh.ani@live.com">ANI717 (Animesh Bala Ani)</maintainer>
   <license>MIT License</license>
 
