@@ -42,9 +42,9 @@ Default `model_type`:`onnx`<br/>
 
 ## Settings <a name="set"></a>
 Edit `settings.json` file to assign `xmodel`, `zmodel`, `model_input_shape`, `image topic`, `twist_topic` and `publish frequency`.<br/>
-Default `model_input_shape`:`[1, 3, 75, 75]`<br/>
-Default `zmodel`:`z.onnx`<br/>
-Default `xmodel`:`x.onnx`<br/>
+Default `model_input_shape`:`[1, 3, 75, 75]` Input shape of ONNX model<br/>
+Default `zmodel`:`z.onnx` ONNX model file to predict `angular z` value<br/>
+Default `xmodel`:`x.onnx` ONNX model file to predict `linear z` value<br/>
 Default `image topic`:`\image`<br/>
 Default `twist topic`:`\cmd_vel`<br/> 
 Default `publish frequency`:`100`<br/>
