@@ -23,7 +23,7 @@ Robotics workspace. Contains ROS2 packages to run robot cars controlled by gamep
 
 ## ROS2 Packages
 #### Common Packages:<br/>
-* [ros2_pytorch_model_to_twist_message](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2_pytorch_model_to_twist_message)<br/>
+* [ros2_deep_learning_model_to_twist_message](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2_deep_learning_to_twist_message)<br/>
 * [ros2_save_camera_image](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2_save_camera_image)<br/>
 
 #### Robot Packages:<br/>
