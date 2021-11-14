@@ -27,7 +27,7 @@ ROS 2 Package to Publish Gamepad Controller Data as Twist Message for Robot Move
 ## Install Dependency <a name="install"></a>
 Install `Inputs`.<br/>
 ```
-python3 -m pip install inputs
+sudo -H python3 -m pip install inputs
 ```
 Install ROS2 dependency.<br/>
 ```
