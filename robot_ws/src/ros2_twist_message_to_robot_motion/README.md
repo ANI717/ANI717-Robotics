@@ -56,7 +56,7 @@ colcon build --symlink-install && source install/local_setup.bash && ros2 launch
 
 ## Miscellaneous <a name="miscellaneous"></a>
 Select Robot type from `jetbot` or `adafruit` by editing `line 35` of `launch/launch.py` file.<br/>
-Or use this names as arguments for `robot_type`.<br/>
+Or use these names as arguments for `robot_type`.<br/>
 Default `robot_type`:`jetbot`<br/> 
 
 Edit `settings.json` file to assign `x_calibration` and `z_calibration`.<br/>
