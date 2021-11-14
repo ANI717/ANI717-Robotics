@@ -40,7 +40,7 @@ Select Deep Learning Model type by editing `line 39` of `launch/launch.py` file.
 Or use these names as arguments for `model_type`.<br/>
 Default `model_type`:`onnx`<br/>
 
-Select `True` by editing `line 38` of `launch/launch.py` file to launch `ros2 cam2image` for collecting image data with camera.<br/>
+Select `True` by editing `line 44` of `launch/launch.py` file to launch `ros2 cam2image` for collecting image data with camera.<br/>
 Or use `True` as argument for `cam2image`.<br/>
 Default `cam2image`:`True`<br/> 
 
