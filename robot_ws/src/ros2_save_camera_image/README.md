@@ -20,7 +20,7 @@ Example:`0000001_z05_x05.jpg`<br/>
 ## Install Dependency <a name="install"></a>
 Install `Opencv`.<br/>
 ```
-python3 -m pip install opencv-python
+sudo -H python3 -m pip install opencv-python
 ```
 Install ROS2 dependency.<br/>
 ```
