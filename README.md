@@ -3,7 +3,9 @@
   <h1 align="center">ANI717 Robotics Workspace</h1>
 </p>
 
-Robotics workspace. Contains ROS2 packages to run robot cars controlled by gamepad, collects annotated camera images, and runs a robot car autonomously with a trained neural network.<br/>
+<p align="justify">
+Robotics workspace. Contains ROS2 packages to run robot cars controlled by gamepad, collects annotated camera images, and runs a robot car autonomously with a trained neural network.
+</p>
 
 ## Quick Links
 [Headless Jetbot Setup](https://github.com/ANI717/Headless-Jetson-Nano-Setup)<br/>
