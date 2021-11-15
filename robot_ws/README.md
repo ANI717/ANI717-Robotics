@@ -1,7 +1,7 @@
 ## Install Dependency
 Install `Inputs` and `Adafruit_MotorHat`.<br/>
 ```
-python3 -m pip install inputs Adafruit_MotorHat
+sudo -H python3 -m pip install inputs Adafruit_MotorHat
 ```
 Install ROS2 dependency.<br/>
 ```
