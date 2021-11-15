@@ -9,8 +9,8 @@
 
 ## Table of Contents
 * [Install Required Packages (Jetson Nano)](#jetson) <br/>
-* [Install Dependency](#install) <br/>
 * [Add User to Input Group](#user) <br/>
+* [Install Dependency](#install) <br/>
 * [Build, Source & Launch Package (Gamepad)](#gamepad) <br/>
 * [Build, Source & Launch Package (Self Driving))](#self) <br/>
 * [Launch Arguments](#arg) <br/>
@@ -27,18 +27,19 @@ chmod +x ./torch2trt_onnx.sh && ./torch2trt_onnx.sh
 sudo -H python3 -m pip install inputs Adafruit_MotorHat
 ```
 
-## Install Dependency <a name="install"></a>
-Install ROS2 dependency.<br/>
-```
-sudo apt-get update
-rosdep update
-rosdep install --from-paths src --ignore-src -r -y
-```
-
 ## Add User to Input Group <a name="user"></a>
 Run following command and reboot.<br/>
 ```
 sudo gpasswd -a $USER input
+```
+
+## Install Dependency <a name="install"></a>
+Install ROS2 dependency.<br/>
+```
+cd ~/ANI717_Robotics/simulation_ws/
+sudo apt-get update
+rosdep update
+rosdep install --from-paths src --ignore-src -r -y
 ```
 
 ## Build, Source & Launch Package (Gamepad) <a name="gamepad"></a>
