@@ -53,9 +53,19 @@ colcon build --symlink-install && source install/setup.bash && ros2 launch robot
 ```
 
 ## Launch Arguments <a name="arg"></a>
-Select Gamepad type from `logitech` or `waveshare` by editing `line 31` of `launch/launch.py` file.<br/>
-Or use these names as arguments for `gamepad_type`.<br/>
-Default `gamepad_type`:`logitech`<br/> 
+Select Gamepad type from `logitech` or `waveshare` as arguments for `gamepad_type`.<br/>
+Default `gamepad_type`:`logitech`<br/>
+
+Select Deep Learning Model type as arguments for `model_type`.<br/>
+Default `model_type`:`onnx`<br/>
+
+Select `True` as argument for `cam2image` and `False` as argument for `csijetson` to run `cam2image`.<br/>
+Select `False` as argument for `cam2image` and `True` as argument for `csijetson` to run `ros2_csi_camera_publish` package.<br/>
+Default `cam2image`:`False`<br/>
+Default `csijetson`:`True`<br/> 
+
+Select Robot type from `jetbot` or `adafruit` as arguments for `robot_type`.<br/>
+Default `robot_type`:`jetbot`<br/> 
 
 ## Zip Images for Download <a name="zip"></a>
 ```
