@@ -2,6 +2,7 @@
   <h1 align="center">ANI717 Robot Workspace</h1>
 </p>
 
+<img src="https://github.com/ANI717/ANI717_Robotics/blob/main/Robot%20Workspace.png" alt="Robot Workspace Diagram" class="inline"/><br/>
 
 ## Colaborators
 [Animesh Bala Ani](https://www.linkedin.com/in/ani717/)
