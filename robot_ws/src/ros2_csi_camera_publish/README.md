@@ -12,7 +12,6 @@ ROS 2 Package to Publish CSI Camera Image as <code>sensor_msgs/Image</code> mess
 ## Table of Contents
 * [Install Dependency](#install) <br/>
 * [Build, Source & Launch Package](#launch) <br/>
-* [Launch Arguments](#arg) <br/>
 * [Settings](#set) <br/>
 
 ## Install Dependency <a name="install"></a>
@@ -34,10 +33,12 @@ colcon build --symlink-install && source install/local_setup.bash && ros2 launch
 ```
 
 ## Settings <a name="set"></a>
-Edit `settings.json` file to assign `xmodel`, `zmodel`, `model_input_shape`, `image topic`, `twist_topic` and `publish frequency`.<br/>
-Default `model_input_shape`:`[1, 3, 75, 75]` - Input shape of ONNX model<br/>
-Default `zmodel`:`z.onnx` - ONNX model file to predict `angular z` value<br/>
-Default `xmodel`:`x.onnx` - ONNX model file to predict `linear z` value<br/>
-Default `image topic`:`\image`<br/>
-Default `twist topic`:`\cmd_vel`<br/> 
+Edit `settings.json` file to assign `publish_topic`, `publish frequency`, `capture_width`, `capture_height`, `framerate`, `flip_method`, `display_width` and `display_height`.<br/>
+Default `publish_topic`:`\image`<br/> 
 Default `publish frequency`:`100`<br/>
+Default `capture_width`:`320`<br/>
+Default `capture_height`:`240`<br/>
+Default `framerate`:`30`<br/>
+Default `flip_method`:`0`<br/>
+Default `display_width`:`320`<br/>
+Default `display_height`:`240`<br/>
