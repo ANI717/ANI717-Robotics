@@ -98,6 +98,7 @@ class ONNXTwist(Node):
         frame = np.reshape(msg.data, (height, width, channel))
         
         # transform image
+        frame = cv2.resize(frame, dsize=self.model_input_shape[-2:])
         frame = normalize(frame, mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5], max_pixel_value=255.0)
         frame = cv2.dnn.blobFromImage(frame)
         
