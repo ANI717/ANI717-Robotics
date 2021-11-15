@@ -2,8 +2,10 @@
   <h1 align="center">ROS 2 Deep Learning Package for Robot Movement</h1>
 </p>
 
+<p align="justify">
 ROS 2 Package to Publish Twist Message Predicted from Deep Learning Models for Robot Movement.<br/>
-
+</p>
+  
 ## Colaborators
 [Animesh Bala Ani](https://www.linkedin.com/in/ani717/)
 
