@@ -29,7 +29,7 @@ source install/local_setup.bash
 ros2 run ros2_csi_camera_publish jetson
 ```
 ```
-colcon build --symlink-install && source install/local_setup.bash && ros2 launch ros2_csi_camera_publish launch.py
+colcon build --symlink-install && source install/local_setup.bash && ros2 run ros2_csi_camera_publish jetson
 ```
 
 ## Settings <a name="set"></a>
