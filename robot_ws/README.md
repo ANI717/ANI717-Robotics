@@ -12,6 +12,7 @@ sudo -H python3 -m pip install inputs Adafruit_MotorHat
 ## Install Dependency
 Install ROS2 dependency.<br/>
 ```
+sudo apt-get update
 rosdep update
 rosdep install --from-paths src --ignore-src -r -y
 ```
