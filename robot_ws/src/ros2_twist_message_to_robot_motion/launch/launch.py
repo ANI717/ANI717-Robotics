@@ -29,11 +29,13 @@ def generate_launch_description():
     # Create launch configuration variables
     robot_type = LaunchConfiguration('robot_type')
     
+    
     # Declare the launch arguments
     declare_robot_type_cmd = DeclareLaunchArgument(
         'robot_type',
         default_value='jetbot',
         description='Type of Robot to drive.')
+    
     
     # Specify the actions
     execute_cmd = Node(
