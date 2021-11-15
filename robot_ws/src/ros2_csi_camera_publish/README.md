@@ -11,7 +11,7 @@ ROS 2 Package to Publish CSI Camera Image as <code>sensor_msgs/Image</code> mess
 
 ## Table of Contents
 * [Install Dependency](#install) <br/>
-* [Build, Source & Launch Package](#launch) <br/>
+* [Build, Source & Run Package](#run) <br/>
 * [Settings](#set) <br/>
 
 ## Install Dependency <a name="install"></a>
@@ -22,7 +22,7 @@ rosdep update
 rosdep install --from-paths src --ignore-src -r -y
 ```
 
-## Build, Source & Run Package <a name="launch"></a>
+## Build, Source & Run Package <a name="run"></a>
 ```
 colcon build --symlink-install --packages-select ros2_csi_camera_publish
 source install/local_setup.bash
