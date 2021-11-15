@@ -23,7 +23,7 @@ Robotics workspace. Contains ROS2 packages to run robot cars controlled by gamep
 <img src="https://github.com/ANI717/ANI717_Robotics/blob/main/Robot%20Workspace.png" alt="Robot Workspace Diagram" class="inline"/><br/>
 <img src="https://github.com/ANI717/ANI717_Robotics/blob/main/Simulation%20Workspace.png" alt="Simulation Workspace Diagram" class="inline"/><br/>
 
-## ROS2 Packages
+## Developed ROS2 Packages
 #### Common Packages:<br/>
 * [ros2_deep_learning_model_to_twist_message](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2_deep_learning_to_twist_message)<br/>
 * [ros2_save_camera_image](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2_save_camera_image)<br/>
@@ -43,8 +43,7 @@ Robotics workspace. Contains ROS2 packages to run robot cars controlled by gamep
 git clone https://github.com/ANI717/ANI717_Robotics
 ```
 
-## Robot Workspace
-[Robot Workspace](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws)<br/>
+## [Robot Workspace](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws)
 #### Build, Source & Launch Package (Gamepad)
 ```
 cd ~/ANI717_Robotics/robot_ws/
@@ -57,8 +56,7 @@ cd ~/ANI717_Robotics/robot_ws/
 colcon build --symlink-install && . install/setup.bash && ros2 launch robot_app autonomous_launch.py
 ```
 
-## Simulation Workspace
-[Simulation Workspace](https://github.com/ANI717/ANI717_Robotics/tree/main/simulation_ws)<br/>
+## [Simulation Workspace](https://github.com/ANI717/ANI717_Robotics/tree/main/simulation_ws)
 #### Build, Source & Launch Package (Keyboard)
 Terminal 1
 ```
