@@ -23,7 +23,6 @@ import json
 import cv2
 import numpy as np
 import onnxruntime as ort
-import albumentations as A
 
 import rclpy
 from rclpy.node import Node
@@ -42,6 +41,21 @@ def calibration(z, x, previous_z, previous_x):
     return round(z/5 - 1, 1), 0.7
 
 
+def normalize(img, mean, std, max_pixel_value=255.0):
+    mean = np.array(mean, dtype=np.float32)
+    mean *= max_pixel_value
+
+    std = np.array(std, dtype=np.float32)
+    std *= max_pixel_value
+
+    denominator = np.reciprocal(std, dtype=np.float32)
+
+    img = img.astype(np.float32)
+    img -= mean
+    img *= denominator
+    return img
+
+
 #__Classes
 class ONNXTwist(Node):
     """ONNX Twist Class.
@@ -50,7 +64,7 @@ class ONNXTwist(Node):
     
     """
 
-    def __init__(self, xsession, zsession, model_input_shape, transforms, image_topic='/image', twist_topic='/cmd_vel', publish_frequency=100):
+    def __init__(self, xsession, zsession, model_input_shape, image_topic='/image', twist_topic='/cmd_vel', publish_frequency=100):
         super().__init__('onnx_publisher')
         
         # initialize subscriber
@@ -63,7 +77,6 @@ class ONNXTwist(Node):
         
         # variable initialization
         self.model_input_shape = model_input_shape
-        self.transforms = transforms
         self.xsession = xsession
         self.zsession = zsession
         self.z = 0.0
@@ -85,7 +98,7 @@ class ONNXTwist(Node):
         frame = np.reshape(msg.data, (height, width, channel))
         
         # transform image
-        frame = self.transforms(image=frame)["image"]
+        frame = normalize(frame, mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5], max_pixel_value=255.0)
         frame = cv2.dnn.blobFromImage(frame)
         
         # makes prediction for angular z and linear x value from onnx model
@@ -132,14 +145,9 @@ def main(args=None):
         twist_topic = content["twist_topic"]
         publish_frequency = content["publish_frequency"]
     
-    # image transformation
-    transforms = A.Compose([
-        A.Resize(height=model_input_shape[2], width=model_input_shape[3]),
-        A.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5], max_pixel_value=255.0,),])
-    
     # initializes node and start publishing
     rclpy.init(args=args)
-    onnx_publisher = ONNXTwist(xsession, zsession, model_input_shape, transforms, image_topic, twist_topic, publish_frequency)
+    onnx_publisher = ONNXTwist(xsession, zsession, model_input_shape, image_topic, twist_topic, publish_frequency)
     rclpy.spin(onnx_publisher)
     
     # shuts down and releases everything
