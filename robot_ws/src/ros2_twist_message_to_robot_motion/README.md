@@ -33,9 +33,9 @@ Direction: `Backward` `Left`.<br/>
 
 
 ## Install Dependency <a name="install"></a>
-Install `traitlets`, `multiexit` and `Adafruit_MotorHat`.
+Install `Adafruit_MotorHat`.
 ```
-sudo -H python3 -m pip install Adafruit_MotorHat traitlets multiexit
+sudo -H python3 -m pip install Adafruit_MotorHat
 ```
 Install ROS2 dependency.
 ```
