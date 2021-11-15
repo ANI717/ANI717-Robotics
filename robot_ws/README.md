@@ -17,12 +17,11 @@
 * [Zip Images for Download](#zip) <br/>
 
 ## Install Required Packages (Jetson Nano) <a name="jetson"></a>
-Install `ROS2 Dashing`, `PyTorch`, `Torchvision`, `ONNXRuntime-GPU`, `Inputs` and `Adafruit_MotorHat`.<br/>
+Install `ROS2 Dashing`, `ONNXRuntime-GPU`, `Inputs` and `Adafruit_MotorHat`.<br/>
 ```
 git clone https://github.com/ANI717/Headless-Jetson-Nano-Setup
 cd ~/Headless-Jetson-Nano-Setup
 chmod +x ./dashing.sh && ./dashing.sh
-chmod +x ./pytorch.sh && ./pytorch.sh
 chmod +x ./torch2trt_onnx.sh && ./torch2trt_onnx.sh
 sudo -H python3 -m pip install inputs Adafruit_MotorHat
 ```
