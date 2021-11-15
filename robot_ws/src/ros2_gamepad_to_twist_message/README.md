@@ -2,7 +2,9 @@
   <h1 align="center">ROS 2 Package to Publish Gamepad Data as Twist Message</h1>
 </p>
 
+<p align="justify">
 ROS 2 Package to Publish Gamepad Controller Data as Twist Message for Robot Movement.<br/>
+</p>
 
 ## Colaborators
 [Animesh Bala Ani](https://www.linkedin.com/in/ani717/)
