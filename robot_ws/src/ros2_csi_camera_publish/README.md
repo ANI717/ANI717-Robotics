@@ -22,11 +22,11 @@ rosdep update
 rosdep install --from-paths src --ignore-src -r -y
 ```
 
-## Build, Source & Launch Package <a name="launch"></a>
+## Build, Source & Run Package <a name="launch"></a>
 ```
 colcon build --symlink-install --packages-select ros2_csi_camera_publish
 source install/local_setup.bash
-ros2 launch ros2_csi_camera_publish launch.py
+ros2 run ros2_csi_camera_publish jetson
 ```
 ```
 colcon build --symlink-install && source install/local_setup.bash && ros2 launch ros2_csi_camera_publish launch.py
