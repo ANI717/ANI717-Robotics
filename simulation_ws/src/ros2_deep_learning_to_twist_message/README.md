@@ -2,8 +2,10 @@
   <h1 align="center">ROS 2 Deep Learning Package for Robot Movement</h1>
 </p>
 
+<p align="justify">
 ROS 2 Package to Publish Twist Message Predicted from Deep Learning Models for Robot Movement.<br/>
-
+</p>
+  
 ## Colaborators
 [Animesh Bala Ani](https://www.linkedin.com/in/ani717/)
 
@@ -14,10 +16,6 @@ ROS 2 Package to Publish Twist Message Predicted from Deep Learning Models for R
 * [Settings](#set) <br/>
 
 ## Install Dependency <a name="install"></a>
-Install `Albumentations`, `Opencv` and `ONNX Runtime`.<br/>
-```
-sudo -H python3 -m pip install albumentations opencv-python onnxruntime
-```
 Install ROS2 dependency.<br/>
 ```
 sudo apt-get update

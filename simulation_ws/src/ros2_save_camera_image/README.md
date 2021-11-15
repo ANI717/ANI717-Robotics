@@ -2,11 +2,9 @@
   <h1 align="center">ROS 2 Package to Save Anotated Camera Image</h1>
 </p>
 
-ROS 2 Package to Save Camera Image Published in ROS2 Topic along with Geometry Twist Message as Annotation.<br/>
-
-Collected ROS 2 Geometry Twist `linear.x` and `angular.z` data are mapped from the range of `floating`:`-1 to +1` to `integer`:`0 to 10`. Then these values are embeded in the image name. This approach doesn't require additional files for saving annotations separately.<br/>
-
-Example:`0000001_z05_x05.jpg`<br/>
+<p align="justify">
+ROS 2 Package to Save Camera Image Published in ROS2 Topic along with Geometry Twist Message as Annotation. Collected ROS 2 Geometry Twist <code>linear.x</code> and <code>angular.z</code> data are mapped from the range of <code>floating</code>:<code>-1 to +1</code> to <code>integer</code>:<code>0 to 10</code>. Then these values are embeded in the image name. This approach doesn't require additional files for saving annotations separately. Example:<code>0000001_z05_x05.jpg</code>.
+</p>
 
 ## Colaborators
 [Animesh Bala Ani](https://www.linkedin.com/in/ani717/)
@@ -18,10 +16,6 @@ Example:`0000001_z05_x05.jpg`<br/>
 * [Settings](#set) <br/>
 
 ## Install Dependency <a name="install"></a>
-Install `Opencv`.<br/>
-```
-sudo -H python3 -m pip install opencv-python
-```
 Install ROS2 dependency.<br/>
 ```
 sudo apt-get update
