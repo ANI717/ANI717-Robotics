@@ -2,11 +2,13 @@
   <h1 align="center">ROS 2 Package to Save Anotated Camera Image</h1>
 </p>
 
+<p align="justify">
 ROS 2 Package to Save Camera Image Published in ROS2 Topic along with Geometry Twist Message as Annotation.<br/>
 
 Collected ROS 2 Geometry Twist `linear.x` and `angular.z` data are mapped from the range of `floating`:`-1 to +1` to `integer`:`0 to 10`. Then these values are embeded in the image name. This approach doesn't require additional files for saving annotations separately.<br/>
 
 Example:`0000001_z05_x05.jpg`<br/>
+</p>
 
 ## Colaborators
 [Animesh Bala Ani](https://www.linkedin.com/in/ani717/)
