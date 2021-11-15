@@ -71,6 +71,6 @@ Default `robot_type`:`jetbot`<br/>
 
 ## Zip Images for Download <a name="zip"></a>
 ```
-cd ../
+cd ~/ANI717_Robotics/
 zip -r images.zip images
 ```
