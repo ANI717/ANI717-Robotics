@@ -29,6 +29,7 @@ Robotics workspace. Contains ROS2 packages to run robot cars controlled by gamep
 * [ros2_save_camera_image](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2_save_camera_image)<br/>
 
 #### Robot Packages:<br/>
+* [ros2_csi_camera_publish](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2_csi_camera_publish)<br/>
 * [ros2_gamepad_to_twist_message](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2_gamepad_to_twist_message)<br/>
 * [ros2_twist_message_to_robot_motion](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws/src/ros2_twist_message_to_robot_motion)<br/>
 
