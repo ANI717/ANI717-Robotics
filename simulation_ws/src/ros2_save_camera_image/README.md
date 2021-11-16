@@ -19,7 +19,7 @@ ROS 2 Package to Save Camera Image Published in ROS2 Topic along with Geometry T
 
 
 ## Install Dependency <a name="install"></a>
-Install `OpenCV``.
+Install `OpenCV`.
 ```
 python3 -m pip install opencv-python
 ```
