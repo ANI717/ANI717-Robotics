@@ -57,6 +57,31 @@ colcon build --symlink-install && source install/local_setup.bash && ros2 launch
 ```
 
 
+## Launch Arguments <a name="arg"></a>
+Select `True` or `False` as arguments for `use_simulator` to decide whether to launch `gazebo server`.<br/>
+Default `use_simulator`:`True`<br/>
+
+Select `True` or `False` as arguments for `headless` to decide whether not to launch `gazebo client`.<br/>
+Default `headless`:`False`<br/>
+
+Select `complete path of world file` as arguments for `world` to simulate that world.<br/>
+Default `world`:`os.path.join(ros2_world_simulation_dir, 'worlds', 'racetrack_day.world')`<br/>
+
+Select `name of robot urdf file` as arguments for `urdf_file` to simulate that robot.<br/>
+Default `urdf_file`:`jetbot.xml`<br/>
+
+Select Deep Learning Model type as arguments for `model_type`.<br/>
+Default `model_type`:`onnx`<br/>
+
+Select required values of following arguments for robot's initial position.<br/>
+Default `x_pos`:`2.75`<br/>
+Default `y_pos`:`-14.0`<br/>
+Default `z_pos`:`0.5`<br/>
+Default `roll`:`0.0`<br/>
+Default `pitch`:`0.0`<br/>
+Default `yaw`:`0.0`<br/>
+
+
 ## Zip Images for Download <a name="zip"></a>
 ```
 cd ../
