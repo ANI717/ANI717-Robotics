@@ -6,7 +6,7 @@
 This script publishes keyboard data to "\cmd_vel" topic as Twist message.
 
 Revision History:
-        2021-10-01 (Animesh): Baseline Software.
+        2021-10-01 (ANI717 - Animesh Bala Ani): Baseline Software.
 
 Example:
         $ colcon build && source install/setup.bash && ros2 run ros2_keyboard_to_twist_message execute
