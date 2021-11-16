@@ -58,7 +58,7 @@ Default `world`:`os.path.join(package_dir, 'worlds', 'empty.world')`<br/>
 Select `name of robot urdf file` as arguments for `urdf_file` to simulate that robot.<br/>
 Default `urdf_file`:`jetbot.xml`<br/>
 
-Select required values of following arguments for robot's initial position.
+Select required values of following arguments for robot's initial position.<br/>
 Default `x_pos`:`0.0`<br/>
 Default `y_pos`:`0.0`<br/>
 Default `z_pos`:`0.0`<br/>
