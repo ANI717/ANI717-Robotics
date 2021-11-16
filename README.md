@@ -43,7 +43,7 @@ Robotics workspace. Contains ROS2 packages to run robot cars controlled by gamep
 git clone https://github.com/ANI717/ANI717_Robotics
 ```
 
-## [Robot Workspace](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws)
+## [Robot Workspace](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws) (JetBot)
 #### Build, Source & Launch Package (Gamepad)
 ```
 cd ~/ANI717_Robotics/robot_ws/
@@ -58,7 +58,7 @@ colcon build --symlink-install && source install/local_setup.bash
 ros2 launch robot_app autonomous_launch.py
 ```
 
-## [Simulation Workspace](https://github.com/ANI717/ANI717_Robotics/tree/main/simulation_ws)
+## [Simulation Workspace](https://github.com/ANI717/ANI717_Robotics/tree/main/simulation_ws) (AWS RoboMaker)
 #### Build, Source & Launch Package (Keyboard)
 Terminal 1
 ```
