@@ -2,7 +2,22 @@
   <h1 align="center">ROS 2 Deep Learning Package for Robot Movement</h1>
 </p>
 
-ROS 2 Package to Publish Gamepad Controller Inputs to Twist Message for Robot Movement.<br/>
+<p align="justify">
+ROS 2 Package to Publish Gamepad Controller Inputs to Twist Message for Robot Movement.
+</p>
+
+## Colaborators
+[Animesh Bala Ani](https://www.linkedin.com/in/ani717/)
+
+
+## Table of Contents
+* [Key Mapping](#key) <br/>
+* [Demonstration](#demo) <br/>
+* [Install Dependency](#install) <br/>
+* [Build, Source & Launch Package](#launch) <br/>
+* [Launch Arguments](#arg) <br/>
+* [Settings](#set) <br/>
+
 
 ## Install Dependency
 Install `Getch`.<br/>
