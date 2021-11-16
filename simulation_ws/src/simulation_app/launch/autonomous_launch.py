@@ -6,12 +6,12 @@
 This script moves Jetbot.
 
 Revision History:
-        2021-08-26 (Animesh): Baseline Software.
+        2021-08-26 (ANI717 - Animesh Bala Ani): Baseline Software.
 
 Example:
-        $ colcon build --symlink-install && . install/setup.bash && ros2 launch simulation_launch autonomous_launch.py
-        $ . install/setup.bash && ros2 launch autonomous_launch keyboard_launch.py
-        $ ros2 launch simulation_launch autonomous_launch.py
+        $ colcon build --symlink-install && . install/setup.bash && ros2 launch simulation_app autonomous_launch.py
+        $ source install/setup.bash && ros2 launch simulation_app keyboard_launch.py
+        $ ros2 launch simulation_app autonomous_launch.py
 
 """
 
@@ -47,6 +47,7 @@ def generate_launch_description():
     pitch = LaunchConfiguration('pitch')
     yaw = LaunchConfiguration('yaw')
     urdf_file = LaunchConfiguration('urdf_file')
+    model_type = LaunchConfiguration('model_type')
     
     
     # Declare the launch arguments
@@ -93,6 +94,11 @@ def generate_launch_description():
         'urdf_file',
         default_value='jetbot.xml')
     
+    declare_model_type_cmd = DeclareLaunchArgument(
+        'model_type',
+        default_value='onnx',
+        description='Type of Model and Runtime to use.')
+    
     
     # Specify the actions
     world_launch_cmd = IncludeLaunchDescription(
@@ -115,9 +121,10 @@ def generate_launch_description():
         PythonLaunchDescriptionSource(os.path.join(ros2_robot_simulation_dir, 'launch', 'states.py')),
         launch_arguments={'urdf': urdf_file,}.items())
     
-    pytorch_to_twist_cmd = Node(
-        package = 'ros2_pytorch_model_to_twist_message',
-        executable = 'execute')
+    deeplearn_to_twist_cmd = Node(
+        package = 'ros2_deep_learning_to_twist_message',
+        node_executable = model_type,
+        name='deeplearning_to_twist')
     
     
     # Create the launch description and populate
@@ -134,12 +141,13 @@ def generate_launch_description():
     ld.add_action(declare_pitch_cmd)
     ld.add_action(declare_yaw_cmd)
     ld.add_action(declare_urdf_file_cmd)
+    ld.add_action(declare_model_type_cmd)
     
     # Add all actions
     ld.add_action(world_launch_cmd)
     ld.add_action(spawn_robot_cmd)
     ld.add_action(robot_states_cmd)
-    ld.add_action(pytorch_to_twist_cmd)
+    ld.add_action(deeplearn_to_twist_cmd)
         
     return ld
 

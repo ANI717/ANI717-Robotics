@@ -6,12 +6,12 @@
 This script moves Jetbot.
 
 Revision History:
-        2021-08-26 (Animesh): Baseline Software.
+        2021-08-26 (ANI717 - Animesh Bala Ani): Baseline Software.
 
 Example:
-        $ colcon build --symlink-install && . install/setup.bash && ros2 launch simulation_launch keyboard_launch.py
-        $ . install/setup.bash && ros2 launch simulation_launch keyboard_launch.py
-        $ ros2 launch simulation_launch keyboard_launch.py
+        $ colcon build --symlink-install && . install/setup.bash && ros2 launch simulation_app keyboard_launch.py
+        $ . install/setup.bash && ros2 launch simulation_app keyboard_launch.py
+        $ ros2 launch simulation_app keyboard_launch.py
 
 """
 
