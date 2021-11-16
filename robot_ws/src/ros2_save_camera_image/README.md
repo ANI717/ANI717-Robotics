@@ -9,11 +9,13 @@ ROS 2 Package to Save Camera Image Published in ROS2 Topic along with Geometry T
 ## Colaborators
 [Animesh Bala Ani](https://www.linkedin.com/in/ani717/)
 
+
 ## Table of Contents
 * [Install Dependency](#install) <br/>
 * [Build, Source & Launch Package](#launch) <br/>
 * [Launch Arguments](#arg) <br/>
 * [Settings](#set) <br/>
+
 
 ## Install Dependency <a name="install"></a>
 Install ROS2 dependency.<br/>
@@ -22,6 +24,7 @@ sudo apt-get update
 rosdep update
 rosdep install --from-paths src --ignore-src -r -y
 ```
+
 
 ## Build, Source & Launch Package <a name="launch"></a>
 ```
@@ -33,10 +36,12 @@ ros2 launch ros2_save_camera_image launch.py
 colcon build --symlink-install && source install/local_setup.bash && ros2 launch ros2_save_camera_image launch.py
 ```
 
+
 ## Launch Arguments <a name="arg"></a>
 Select `True` by editing `line 38` of `launch/launch.py` file to launch `ros2 cam2image` for collecting image data with camera.<br/>
 Or use `True` as argument for `cam2image`.<br/>
 Default `cam2image`:`True`<br/> 
+
 
 ## Settings <a name="set"></a>
 Edit `settings.json` file to assign `image topic`, `twist topic` and `data directory`.<br/>
