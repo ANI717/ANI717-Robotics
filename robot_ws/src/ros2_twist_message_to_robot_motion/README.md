@@ -46,7 +46,7 @@ rosdep update && rosdep install --from-paths src --ignore-src -r -y
 ```
 
 
-## Build, Source & Run Package <a name="launch"></a>
+## Build, Source & Launch Package <a name="launch"></a>
 ```
 colcon build --symlink-install --packages-select ros2_twist_message_to_robot_motion
 source install/local_setup.bash
