@@ -12,9 +12,16 @@ ROS 2 Package to Simulate a Robot in Gazebo Simulation. One can put any <code>*R
 
 
 ## Table of Contents
+* [Demonstration](#demo) <br/>
 * [Install Dependency](#install) <br/>
 * [Build, Source & Launch Package](#launch) <br/>
 * [Launch Arguments](#arg) <br/>
+
+
+## Demonstration <a name="demo"></a>
+Demonstration of a robot simulation in an empty world.<br/>
+
+<img src="https://github.com/ANI717/ANI717_Robotics/blob/main/robot_simulation.png" alt="Robot Simulation" class="inline"/><br/>
 
 
 ## Install Dependency <a name="install"></a>
