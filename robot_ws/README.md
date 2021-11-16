@@ -49,14 +49,14 @@ rosdep install --from-paths src --ignore-src -r -y
 ## Build, Source & Launch Package (Gamepad) <a name="gamepad"></a>
 ```
 cd ~/ANI717_Robotics/robot_ws/
-colcon build --symlink-install && source install/setup.bash && ros2 launch robot_app gamepad_launch.py
+colcon build --symlink-install && source install/local_setup.bash && ros2 launch robot_app gamepad_launch.py
 ```
 
 
 ## Build, Source & Launch Package (Self Driving) <a name="self"></a>
 ```
 cd ~/ANI717_Robotics/robot_ws/
-colcon build --symlink-install && source install/setup.bash && ros2 launch robot_app autonomous_launch.py
+colcon build --symlink-install && source install/local_setup.bash && ros2 launch robot_app autonomous_launch.py
 ```
 
 
