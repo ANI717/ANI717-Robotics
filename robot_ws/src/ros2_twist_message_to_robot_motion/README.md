@@ -56,10 +56,12 @@ ros2 launch ros2_twist_message_to_robot_motion launch.py
 colcon build --symlink-install && source install/local_setup.bash && ros2 launch ros2_twist_message_to_robot_motion launch.py
 ```
 
+
 ## Launch Arguments <a name="arg"></a>
 Select Robot type from `jetbot` or `adafruit` by editing `line 35` of `launch/launch.py` file.<br/>
 Or use these names as arguments for `robot_type`.<br/>
 Default `robot_type`:`jetbot`<br/> 
+
 
 ## Settings <a name="set"></a>
 Edit `settings.json` file to assign `x_calibration` and `z_calibration`.<br/>
