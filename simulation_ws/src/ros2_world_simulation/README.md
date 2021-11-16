@@ -28,6 +28,7 @@ rosdep install --from-paths src --ignore-src -r -y
 
 ## Build, Source & Launch Package <a name="launch"></a>
 ```
+export DISPLAY=:0
 colcon build --symlink-install --packages-select ros2_world_simulation
 source install/local_setup.bash
 ros2 launch ros2_world_simulation launch.py
