@@ -54,3 +54,14 @@ Default `headless`:`True`<br/>
 
 Select `complete path of world file` as arguments for `world` to simulate that world.<br/>
 Default `world`:`os.path.join(package_dir, 'worlds', 'empty.world')`<br/>
+
+Select `name of robot urdf file` as arguments for `urdf_file` to simulate that robot.<br/>
+Default `urdf_file`:`jetbot.xml`<br/>
+
+Select required values of following arguments for robot's initial position.
+Default `x_pos`:`0.0`<br/>
+Default `y_pos`:`0.0`<br/>
+Default `z_pos`:`0.0`<br/>
+Default `roll`:`0.0`<br/>
+Default `pitch`:`0.0`<br/>
+Default `yaw`:`0.0`<br/>
