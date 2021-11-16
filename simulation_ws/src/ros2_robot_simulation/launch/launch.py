@@ -7,11 +7,11 @@ This script simulates a robot in Gazebo simulation.
 
 Revision History:
 
-        2021-10-23 (Animesh): Baseline Software.
+        2021-10-23 (ANI717 - Animesh Bala Ani): Baseline Software.
 
 Example:
-        $ colcon build && source install/setup.bash && ros2 launch ros2_robot_simulation launch.py
-        $ source install/setup.bash && ros2 launch ros2_robot_simulation launch.py
+        $ colcon build --symlink-install && source install/local_setup.bash && ros2 launch ros2_robot_simulation launch.py
+        $ source install/local_setup.bash && ros2 launch ros2_robot_simulation launch.py
         $ ros2 launch ros2_robot_simulation launch.py
 
 
