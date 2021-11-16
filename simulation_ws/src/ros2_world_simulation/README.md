@@ -3,7 +3,7 @@
 </p>
 
 <p align="justify">
-ROS 2 Package to Simulate a World File in Gazebo Simulation.<br/>
+ROS 2 Package to Simulate a World File in Gazebo Simulation. One can put any <code>*.world</code> file in <code>worlds</code> folder and related <code>material</code>, <code>techture</code> and <code>mesh</code> files in <code>models</code> folder. Change <code>line 57</code> in <code>launch/launch.py</code> to select the world file. Default is <code>empty.world</code>.
 </p>
 
 
@@ -38,6 +38,11 @@ colcon build --symlink-install && source install/local_setup.bash && ros2 launch
 
 
 ## Launch Arguments <a name="arg"></a>
-Select Gamepad type from `logitech` or `waveshare` by editing `line 31` of `launch/launch.py` file.<br/>
-Or use these names as arguments for `gamepad_type`.<br/>
-Default `gamepad_type`:`logitech`<br/> 
+Select 'True' or 'False' as arguments for `use_simulator` to decide whether to launch `gazebo server`.<br/>
+Default `use_simulator`:`True`<br/>
+
+Select 'True' or 'False' as arguments for `headless` to decide whether to launch `gazebo client`.<br/>
+Default `headless`:`True`<br/>
+
+Select 'complete path of world file' as arguments for `world` to simulate that world.<br/>
+Default `world`:`os.path.join(package_dir, 'worlds', 'empty.world')`<br/>
