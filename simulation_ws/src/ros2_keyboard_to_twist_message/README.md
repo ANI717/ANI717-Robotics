@@ -12,14 +12,18 @@ ROS 2 Package to Publish Gamepad Controller Inputs to Twist Message for Robot Mo
 
 ## Table of Contents
 * [Key Mapping](#key) <br/>
-* [Demonstration](#demo) <br/>
 * [Install Dependency](#install) <br/>
-* [Build, Source & Launch Package](#launch) <br/>
-* [Launch Arguments](#arg) <br/>
-* [Settings](#set) <br/>
+* [Build, Source & Run Package](#run) <br/>
 
 
-## Install Dependency
+## Key Mapping <a name="key"></a>
+`+ linear.x` : `Forward`<br/>
+`- linear.x` : `Backward`<br/>
+`+ angular.z` : `Right`<br/>
+`- angular.z` : `Left`<br/>
+
+
+## Install Dependency <a name="install"></a>
 Install `Getch`.<br/>
 ```
 python3 -m pip install getch
@@ -30,7 +34,12 @@ rosdep update
 rosdep install --from-paths src --ignore-src -r -y
 ```
 
-## Build, Source & Run Package
+## Build, Source & Run Package <a name="run"></a>
 ```
-colcon build && . install/setup.bash && ros2 run ros2_keyboard_to_twist_message execute
+colcon build --symlink-install --packages-select ros2_keyboard_to_twist_message
+source install/local_setup.bash
+ros2 run ros2_keyboard_to_twist_message execute
+```
+```
+colcon build --symlink-install && source install/local_setup.bash && ros2 run ros2_keyboard_to_twist_message execute
 ```
