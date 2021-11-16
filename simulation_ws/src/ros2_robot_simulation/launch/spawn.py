@@ -7,11 +7,11 @@ This script spawns URDF robots.
 
 Revision History:
 
-        2021-10-22 (Animesh): Baseline Software.
+        2021-10-22 (ANI717 - Animesh Bala Ani): Baseline Software.
 
 Example:
-        $ colcon build && source install/setup.bash && ros2 launch ros2_robot_simulation spawn.py
-        $ source install/setup.bash && ros2 launch ros2_robot_simulation spawn.py
+        $ colcon build --symlink-install && source install/local_setup.bash && ros2 launch ros2_robot_simulation spawn.py
+        $ source install/local_setup.bash && ros2 launch ros2_robot_simulation spawn.py
         $ ros2 launch ros2_robot_simulation spawn.py
 
 """
