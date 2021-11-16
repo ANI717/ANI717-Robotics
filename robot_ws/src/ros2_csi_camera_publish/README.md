@@ -6,6 +6,7 @@
 ROS 2 Package to Publish CSI Camera Image as <code>sensor_msgs/Image</code> message on <code>Jetson Nano</code>.
 </p>
 
+
 ## Colaborators
 [Animesh Bala Ani](https://www.linkedin.com/in/ani717/)
 
@@ -14,6 +15,7 @@ ROS 2 Package to Publish CSI Camera Image as <code>sensor_msgs/Image</code> mess
 * [Build, Source & Run Package](#run) <br/>
 * [Settings](#set) <br/>
 
+
 ## Install Dependency <a name="install"></a>
 Install ROS2 dependency.<br/>
 ```
@@ -21,6 +23,7 @@ sudo apt-get update
 rosdep update
 rosdep install --from-paths src --ignore-src -r -y
 ```
+
 
 ## Build, Source & Run Package <a name="run"></a>
 ```
@@ -31,6 +34,7 @@ ros2 run ros2_csi_camera_publish jetson
 ```
 colcon build --symlink-install && source install/local_setup.bash && ros2 run ros2_csi_camera_publish jetson
 ```
+
 
 ## Settings <a name="set"></a>
 Edit `settings.json` file to assign `publish_topic`, `publish frequency`, `capture_width`, `capture_height`, `framerate`, `flip_method`, `display_width` and `display_height`.<br/>
