@@ -7,8 +7,8 @@ This script launches world file in Gazebo Simulation.
 
 Revision History:
 
-        2021-10-18 (Animesh): Baseline Software.
-
+        2021-10-18 (ANI717 - Animesh Bala Ani): Baseline Software.
+	
 Example:
         $ colcon build && source install/setup.bash && ros2 launch ros2_world_simulation launch.py
         $ source install/setup.bash && ros2 launch ros2_world_simulation launch.py
