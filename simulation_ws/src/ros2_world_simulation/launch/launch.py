@@ -10,8 +10,8 @@ Revision History:
         2021-10-18 (ANI717 - Animesh Bala Ani): Baseline Software.
 	
 Example:
-        $ colcon build && source install/setup.bash && ros2 launch ros2_world_simulation launch.py
-        $ source install/setup.bash && ros2 launch ros2_world_simulation launch.py
+        $ colcon build --symlink-install && source install/local_setup.bash && ros2 launch ros2_world_simulation launch.py
+        $ source install/local_setup.bash && ros2 launch ros2_world_simulation launch.py
         $ ros2 launch ros2_world_simulation launch.py
 
 """
