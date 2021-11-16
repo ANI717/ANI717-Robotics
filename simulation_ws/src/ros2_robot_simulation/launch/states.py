@@ -7,11 +7,11 @@ This script provides robot states.
 
 Revision History:
 
-        2021-10-22 (Animesh): Baseline Software.
+        2021-10-22 (ANI717 - Animesh Bala Ani): Baseline Software.
 
 Example:
-        $ colcon build && source install/setup.bash && ros2 launch ros2_robot_simulation states.py
-        $ source install/setup.bash && ros2 launch ros2_robot_simulation states.py
+        $ colcon build --symlink-install && source install/local_setup.bash && ros2 launch ros2_robot_simulation states.py
+        $ source install/local_setup.bash && ros2 launch ros2_robot_simulation states.py
         $ ros2 launch ros2_robot_simulation states.py
 
 
