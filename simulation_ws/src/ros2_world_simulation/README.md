@@ -19,7 +19,7 @@ ROS 2 Package to Simulate a World File in Gazebo Simulation. One can put any <co
 
 
 ## Demonstration <a name="demo"></a>
-Demonstration of `racetrack_day.world` simulation.<br/>
+Demonstration of `worlds/racetrack_day.world` simulation.<br/>
 
 <img src="https://github.com/ANI717/ANI717_Robotics/blob/main/world_simulation.jpg" alt="World Simulation" class="inline"/><br/>
 
