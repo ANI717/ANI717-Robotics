@@ -19,7 +19,7 @@ ROS 2 Package to Simulate a Robot in Gazebo Simulation. One can put any <code>*R
 
 
 ## Demonstration <a name="demo"></a>
-Demonstration of a robot simulation in an empty world.<br/>
+Demonstration of a robot (JetBot) simulation in an empty world.<br/>
 
 <img src="https://github.com/ANI717/ANI717_Robotics/blob/main/robot_simulation.png" alt="Robot Simulation" class="inline"/><br/>
 
