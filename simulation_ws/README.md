@@ -16,9 +16,9 @@
 
 
 ## Install Dependency <a name="install"></a>
-Install `Torch`, `Torchvision`, `Albumentations`, `Opencv` and `Getch`.<br/>
+Install `OpenCV`, `ONNXRuntime-GPU` and `Getch`.<br/>
 ```
-python3 -m pip install torch torchvision opencv-python albumentations getch
+python3 -m pip install opencv-python onnxruntime-gpu getch
 ```
 Install ROS2 dependency.<br/>
 ```
