@@ -4,7 +4,7 @@
 </p>
 
 <p align="justify">
-Robotics workspace. Contains ROS2 packages to run robot cars controlled by gamepad, collects annotated camera images, and runs a robot car autonomously with a trained neural network.
+Contains ROS2 packages to run robot car to collect annotated camera images while controlled by Gamepad. Also contains packages to run a robot car autonomously with a trained neural network.
 </p>
 
 ## Quick Links
