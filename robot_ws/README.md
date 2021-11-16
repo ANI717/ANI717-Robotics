@@ -7,6 +7,7 @@
 ## Colaborators
 [Animesh Bala Ani](https://www.linkedin.com/in/ani717/)
 
+
 ## Table of Contents
 * [Install Required Packages (Jetson Nano)](#jetson) <br/>
 * [Add User to Input Group](#user) <br/>
@@ -15,6 +16,7 @@
 * [Build, Source & Launch Package (Self Driving))](#self) <br/>
 * [Launch Arguments](#arg) <br/>
 * [Zip Images for Download](#zip) <br/>
+
 
 ## Install Required Packages (Jetson Nano) <a name="jetson"></a>
 Install `ROS2 Dashing`, `ONNXRuntime-GPU`, `Inputs` and `Adafruit_MotorHat`.<br/>
@@ -26,11 +28,13 @@ chmod +x ./torch2trt_onnx.sh && ./torch2trt_onnx.sh
 sudo -H python3 -m pip install inputs Adafruit_MotorHat
 ```
 
+
 ## Add User to Input Group <a name="user"></a>
 Run following command and reboot.<br/>
 ```
 sudo gpasswd -a $USER input
 ```
+
 
 ## Install Dependency <a name="install"></a>
 Install ROS2 dependency.<br/>
@@ -41,17 +45,20 @@ rosdep update
 rosdep install --from-paths src --ignore-src -r -y
 ```
 
+
 ## Build, Source & Launch Package (Gamepad) <a name="gamepad"></a>
 ```
 cd ~/ANI717_Robotics/robot_ws/
 colcon build --symlink-install && source install/setup.bash && ros2 launch robot_app gamepad_launch.py
 ```
 
+
 ## Build, Source & Launch Package (Self Driving) <a name="self"></a>
 ```
 cd ~/ANI717_Robotics/robot_ws/
 colcon build --symlink-install && source install/setup.bash && ros2 launch robot_app autonomous_launch.py
 ```
+
 
 ## Launch Arguments <a name="arg"></a>
 Select Gamepad type from `logitech` or `waveshare` as arguments for `gamepad_type`.<br/>
@@ -67,6 +74,7 @@ Default `csijetson`:`True`<br/>
 
 Select Robot type from `jetbot` or `adafruit` as arguments for `robot_type`.<br/>
 Default `robot_type`:`jetbot`<br/> 
+
 
 ## Zip Images for Download <a name="zip"></a>
 ```
