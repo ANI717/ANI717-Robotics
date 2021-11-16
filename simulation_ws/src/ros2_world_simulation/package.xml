@@ -4,7 +4,7 @@
   <name>ros2_world_simulation</name>
   <version>1.0.0</version>
   <description>ROS2 world simulation package</description>
-  <maintainer email="animesh.ani@live.com">ANI717</maintainer>
+  <maintainer email="animesh.ani@live.com">ANI717 (Animesh Bala Ani)</maintainer>
   <license>MIT License</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
