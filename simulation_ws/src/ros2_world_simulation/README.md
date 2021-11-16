@@ -38,11 +38,11 @@ colcon build --symlink-install && source install/local_setup.bash && ros2 launch
 
 
 ## Launch Arguments <a name="arg"></a>
-Select 'True' or 'False' as arguments for `use_simulator` to decide whether to launch `gazebo server`.<br/>
+Select `True` or `False` as arguments for `use_simulator` to decide whether to launch `gazebo server`.<br/>
 Default `use_simulator`:`True`<br/>
 
-Select 'True' or 'False' as arguments for `headless` to decide whether to launch `gazebo client`.<br/>
+Select `True` or `False` as arguments for `headless` to decide whether to launch `gazebo client`.<br/>
 Default `headless`:`True`<br/>
 
-Select 'complete path of world file' as arguments for `world` to simulate that world.<br/>
+Select `complete path of world file` as arguments for `world` to simulate that world.<br/>
 Default `world`:`os.path.join(package_dir, 'worlds', 'empty.world')`<br/>
