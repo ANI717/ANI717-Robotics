@@ -47,13 +47,15 @@ git clone https://github.com/ANI717/ANI717_Robotics
 #### Build, Source & Launch Package (Gamepad)
 ```
 cd ~/ANI717_Robotics/robot_ws/
-colcon build --symlink-install && source install/local_setup.bash && ros2 launch robot_app gamepad_launch.py
+colcon build --symlink-install && source install/local_setup.bash
+ros2 launch robot_app gamepad_launch.py
 ```
 
 #### Build, Source & Launch Package (Self Driving)
 ```
 cd ~/ANI717_Robotics/robot_ws/
-colcon build --symlink-install && source install/local_setup.bash && ros2 launch robot_app autonomous_launch.py
+colcon build --symlink-install && source install/local_setup.bash
+ros2 launch robot_app autonomous_launch.py
 ```
 
 ## [Simulation Workspace](https://github.com/ANI717/ANI717_Robotics/tree/main/simulation_ws)
@@ -62,7 +64,8 @@ Terminal 1
 ```
 cd ANI717_Robotics/simulation_ws/
 export DISPLAY=:0
-colcon build --symlink-install && source install/local_setup.bash && ros2 launch simulation_app keyboard_launch.py
+colcon build --symlink-install && source install/local_setup.bash
+ros2 launch simulation_app keyboard_launch.py
 ```
 
 Terminal 2 (Run following commands and select `/image` as `Image View`
@@ -81,7 +84,8 @@ source install/local_setup.bash && ros2 run ros2_keyboard_to_twist_message execu
 ```
 cd ANI717_Robotics/simulation_ws/
 export DISPLAY=:0
-colcon build --symlink-install && source install/local_setup.bash && ros2 launch simulation_app autonomous_launch.py
+colcon build --symlink-install && source install/local_setup.bash
+ros2 launch simulation_app autonomous_launch.py
 ```
 
 ## Acknowledgement
