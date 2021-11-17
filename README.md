@@ -38,12 +38,13 @@ Contains ROS2 packages to run robot car to collect annotated camera images while
 * [ros2_world_simulation](https://github.com/ANI717/ANI717_Robotics/tree/main/simulation_ws/src/ros2_world_simulation)<br/>
 * [ros2_robot_simulation](https://github.com/ANI717/ANI717_Robotics/tree/main/simulation_ws/src/ros2_robot_simulation)<br/>
 
-## Download Workspace
+
+## [Robot Workspace](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws) (JetBot)
+#### Download Workspace
 ```
 git clone https://github.com/ANI717/ANI717_Robotics
 ```
 
-## [Robot Workspace](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws) (JetBot)
 #### Build, Source & Launch Package (Gamepad)
 ```
 cd ~/ANI717_Robotics/robot_ws/
@@ -59,6 +60,11 @@ ros2 launch robot_app autonomous_launch.py
 ```
 
 ## [Simulation Workspace](https://github.com/ANI717/ANI717_Robotics/tree/main/simulation_ws) (AWS RoboMaker)
+#### Download Workspace
+```
+git clone https://github.com/ANI717/ANI717_Robotics
+```
+
 #### Build, Source & Launch Package (Keyboard)
 Terminal 1
 ```
