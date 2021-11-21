@@ -7,11 +7,13 @@
 Contains ROS2 packages to run robot car to collect annotated camera images while controlled by Gamepad. Also contains packages to run a robot car autonomously with a trained neural network.
 </p>
 
+
 ## Quick Links
 [Headless Jetbot Setup](https://github.com/ANI717/Headless-Jetson-Nano-Setup)<br/>
 [Robot Workspace](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws)<br/>
 [Simulation Workspace](https://github.com/ANI717/ANI717_Robotics/tree/main/simulation_ws)<br/>
 [Computer Vision & Deep Learning Repository](https://github.com/ANI717/Self_Driving_CV_Repository)<br/>
+
 
 ## Colaborators
 [Computer Fusion Laboratory (CFL) - Temple University College of Engineering](https://sites.temple.edu/cflab/people/)
@@ -19,9 +21,11 @@ Contains ROS2 packages to run robot car to collect annotated camera images while
 * [Michael Nghe](https://sites.temple.edu/cflab/people/) (Data Collection)<br/>
 * [Dr. Li Bai](https://engineering.temple.edu/about/faculty-staff/li-bai-lbai) (Academic Advisor)<br/>
 
+
 ## Design Diagram
 <img src="https://github.com/ANI717/ANI717_Robotics/blob/main/Robot%20Workspace.png" alt="Robot Workspace Diagram" class="inline"/><br/>
 <img src="https://github.com/ANI717/ANI717_Robotics/blob/main/Simulation%20Workspace.png" alt="Simulation Workspace Diagram" class="inline"/><br/>
+
 
 ## Developed ROS2 Packages
 #### Common Packages:<br/>
@@ -59,6 +63,7 @@ colcon build --symlink-install && source install/local_setup.bash
 ros2 launch robot_app autonomous_launch.py
 ```
 
+
 ## [Simulation Workspace](https://github.com/ANI717/ANI717_Robotics/tree/main/simulation_ws) (AWS RoboMaker)
 #### Download Workspace
 ```
@@ -93,6 +98,7 @@ export DISPLAY=:0
 colcon build --symlink-install && source install/local_setup.bash
 ros2 launch simulation_app autonomous_launch.py
 ```
+
 
 ## Acknowledgement
 [Jetbot](https://jetbot.org/master/)<br/>
