@@ -9,6 +9,7 @@ Contains ROS2 packages to run robot car to collect annotated camera images while
 
 
 ## Quick Links
+[Project Report](https://github.com/ANI717/ANI717_Robotics/blob/main/Project%20Report.pdf)<br/>
 [Headless Jetbot Setup](https://github.com/ANI717/Headless-Jetson-Nano-Setup)<br/>
 [Robot Workspace](https://github.com/ANI717/ANI717_Robotics/tree/main/robot_ws)<br/>
 [Simulation Workspace](https://github.com/ANI717/ANI717_Robotics/tree/main/simulation_ws)<br/>
