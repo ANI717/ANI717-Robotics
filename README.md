@@ -26,6 +26,26 @@ Contains ROS2 packages to run robot car to collect annotated camera images while
 <img src="https://github.com/ANI717/ANI717_Robotics/blob/main/Robot%20Workspace.png" alt="Robot Workspace Diagram" class="inline"/><br/>
 <img src="https://github.com/ANI717/ANI717_Robotics/blob/main/Simulation%20Workspace.png" alt="Simulation Workspace Diagram" class="inline"/><br/>
 
+## Directory Tree
+```
+Robotics Platform
+    ├── Robot Workspace
+    │   └── src
+    │        ├── ROS2 Gamepad to Twist Message
+    │        ├── ROS2 Deep Learning to Twist Message
+    │        ├── ROS2 Twist Message to Robot Motion
+    │        ├── ROS2 CSI Camera Publish
+    │        ├── ROS2 Save Camera Image
+    │        └── Robot App
+    └── Simulation Workspace
+        └── src
+             ├── ROS2 Keyboard to Twist Message
+             ├── ROS2 Deep Learning to Twist Message
+             ├── ROS2 Save Camera Image
+             ├── ROS2 World Simulation
+             ├── ROS2 Robot Simulation
+             └── Simulation App
+```
 
 ## Developed ROS2 Packages
 #### Common Packages:<br/>
