@@ -92,6 +92,7 @@ git clone https://github.com/ANI717/ANI717_Robotics
 
 #### Install ROS2 Dependency
 ```
+cd ANI717_Robotics/simulation_ws/
 sudo apt-get update
 rosdep update
 rosdep install --from-paths src --ignore-src -r -y
